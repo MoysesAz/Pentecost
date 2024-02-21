@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955A1DA92B8559F400B0B520 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */; };
+		955A1DAD2B85614800B0B520 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 955A1DAC2B85614800B0B520 /* FirebaseStorage */; };
+		955A1DAF2B85732800B0B520 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 955A1DAE2B85732800B0B520 /* FirebaseAnalytics */; };
 		957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F712B6FFCD20015348F /* Assets.xcassets */; };
 		957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F742B6FFCD20015348F /* Preview Assets.xcassets */; };
 		957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; };
@@ -130,6 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		957F3F6A2B6FFCD00015348F /* Pentecost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pentecost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F3F6D2B6FFCD00015348F /* PentecostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentecostApp.swift; sourceTree = "<group>"; };
 		957F3F6F2B6FFCD00015348F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,7 +172,9 @@
 			files = (
 				957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */,
 				957F3F9A2B6FFDC10015348F /* Application.framework in Frameworks */,
+				955A1DAF2B85732800B0B520 /* FirebaseAnalytics in Frameworks */,
 				957F3FB02B6FFF140015348F /* Infra.framework in Frameworks */,
+				955A1DAD2B85614800B0B520 /* FirebaseStorage in Frameworks */,
 				957F400B2B7251FC0015348F /* SwiftyXMLParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +233,7 @@
 		957F3F6C2B6FFCD00015348F /* Pentecost */ = {
 			isa = PBXGroup;
 			children = (
+				955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */,
 				957F3FBF2B7000030015348F /* DesignSystem */,
 				957F3F8E2B6FFDA30015348F /* Presentations */,
 				957F3F6D2B6FFCD00015348F /* PentecostApp.swift */,
@@ -442,6 +449,8 @@
 			name = Pentecost;
 			packageProductDependencies = (
 				957F400A2B7251FC0015348F /* SwiftyXMLParser */,
+				955A1DAC2B85614800B0B520 /* FirebaseStorage */,
+				955A1DAE2B85732800B0B520 /* FirebaseAnalytics */,
 			);
 			productName = Pentecost;
 			productReference = 957F3F6A2B6FFCD00015348F /* Pentecost.app */;
@@ -549,6 +558,7 @@
 			mainGroup = 957F3F612B6FFCD00015348F;
 			packageReferences = (
 				957F3FDD2B700B350015348F /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
+				955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 957F3F6B2B6FFCD00015348F /* Products */;
 			projectDirPath = "";
@@ -569,6 +579,7 @@
 			files = (
 				957F40002B7246430015348F /* KingJames.xml in Resources */,
 				957F40012B7246430015348F /* Almeida.xml in Resources */,
+				955A1DA92B8559F400B0B520 /* GoogleService-Info.plist in Resources */,
 				957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */,
 				957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */,
 			);
@@ -815,6 +826,7 @@
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -849,6 +861,7 @@
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1171,6 +1184,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
 		957F3FDD2B700B350015348F /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
@@ -1182,6 +1203,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		955A1DAC2B85614800B0B520 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		955A1DAE2B85732800B0B520 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
 		957F3FDE2B700B670015348F /* SwiftyXMLParser */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 957F3FDD2B700B350015348F /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
