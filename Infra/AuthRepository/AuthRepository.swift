@@ -32,7 +32,7 @@ public class AuthRepository: AuthRepositoryInterface {
 
     }
     
-    public func login(email: String,
+    public func singIn(email: String,
                       password: String,
                       completion: @escaping (Result<AuthEntity, Error>) -> Void) {
 

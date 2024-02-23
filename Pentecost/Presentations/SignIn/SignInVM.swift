@@ -26,7 +26,7 @@ final class SignInVM: ObservableObject {
 
     public func singUpEvent() {
         let login = LoginInput(email: email, password: password)
-        auth.login(login) { result in
+        auth.singIn(login) { result in
             switch result {
             case .success(let result):
                 self.isLoggin.wrappedValue.toggle()
