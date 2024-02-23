@@ -11,7 +11,7 @@ public struct SignInUseCase {
     public func singIn(_ input: SignInInput,
                       completion: @escaping (Result<AuthEntity, Error>) -> Void) {
 
-        repository.singIn(email: input.email, password: input.password) { result in
+        repository.signIn(email: input.email, password: input.password) { result in
             switch result {
             case .success(let value):
                 completion(.success(value))

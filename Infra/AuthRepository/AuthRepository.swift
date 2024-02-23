@@ -10,11 +10,6 @@ import Domain
 import FirebaseAuth
 import FirebaseAuthCombineSwift
 
-
-public enum AuthRepositoryError: Error {
-    case anyExpected
-}
-
 public class AuthRepository: AuthRepositoryInterface {
     private let share: Auth = Auth.auth()
 
@@ -24,7 +19,8 @@ public class AuthRepository: AuthRepositoryInterface {
         
         share.createUser(withEmail: email, password: password) { result, error in
             if error != nil {
-                completion(.failure(AuthRepositoryError.anyExpected))
+                let translateError = self.signInErrors(error: error!)
+                completion(.failure(translateError))
             } else {
                 completion(.success(true))
             }
@@ -32,23 +28,24 @@ public class AuthRepository: AuthRepositoryInterface {
 
     }
     
-    public func singIn(email: String,
+    public func signIn(email: String,
                       password: String,
                       completion: @escaping (Result<AuthEntity, Error>) -> Void) {
 
         share.signIn(withEmail: email, password: password) { result, error in
             if error != nil {
-                completion(.failure(AuthRepositoryError.anyExpected))
+                let translateError = self.signInErrors(error: error!)
+                completion(.failure(translateError))
             } else {
                 let auth = AuthEntity(name: result!.user.uid, token: result!.user.refreshToken!)
+
                 completion(.success(auth))
             }
         }
-
     }
-
-
 
     required public init() {}
 }
+
+
 
