@@ -10,7 +10,7 @@ import Application
 import Infra
 import Domain
 
-final class RegisterVM: ObservableObject {
+final class SignUpVM: ObservableObject {
     @Published public var email: String = ""
     @Published public var password: String = ""
     @Published public var confirmPassword: String = ""
@@ -31,7 +31,7 @@ final class RegisterVM: ObservableObject {
             return
         }
 
-        let login = LoginInput(email: email, password: password)
+        let login = SignInInput(email: email, password: password)
         auth.register(login) { result in
             switch result {
             case .success(let result):

@@ -15,10 +15,10 @@ public struct RegisterUseCase {
         self.repository = repository
     }
 
-    public func register(_ input: LoginInput,
+    public func register(_ input: SignInInput,
                       completion: @escaping (Result<Bool, Error>) -> Void) {
 
-        repository.createUser(email: input.email, password: input.password) { result in
+        repository.registerUser(email: input.email, password: input.password) { result in
             switch result {
             case .success(let value):
                 completion(.success(value))
