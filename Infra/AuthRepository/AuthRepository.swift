@@ -18,7 +18,7 @@ public enum AuthRepositoryError: Error {
 public class AuthRepository: AuthRepositoryInterface {
     private let share: Auth = Auth.auth()
 
-    public func createUser(email: String,
+    public func registerUser(email: String,
                            password: String,
                            completion: @escaping (Result<Bool, Error>) -> Void) {
         

@@ -31,7 +31,7 @@ final class SignUpVM: ObservableObject {
             return
         }
 
-        let login = SignInInput(email: email, password: password)
+        let login = RegisterUseInput(email: email, password: password)
         auth.register(login) { result in
             switch result {
             case .success(let result):

@@ -12,8 +12,8 @@
 		955A1DAF2B85732800B0B520 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 955A1DAE2B85732800B0B520 /* FirebaseAnalytics */; };
 		955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB12B86222700B0B520 /* SingInPresentation.swift */; };
 		955A1DB42B8624B000B0B520 /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB32B8624B000B0B520 /* SignInVM.swift */; };
-		955A1DBB2B86325400B0B520 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBA2B86325400B0B520 /* LoginInput.swift */; };
-		955A1DBE2B86337E00B0B520 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBD2B86337E00B0B520 /* AuthUseCase.swift */; };
+		955A1DBB2B86325400B0B520 /* SignInInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBA2B86325400B0B520 /* SignInInput.swift */; };
+		955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBD2B86337E00B0B520 /* SignInUseCase.swift */; };
 		955A1DC12B86352000B0B520 /* AuthRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DC02B86352000B0B520 /* AuthRepositoryInterface.swift */; };
 		955A1DC42B86382C00B0B520 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DC32B86382C00B0B520 /* AuthRepository.swift */; };
 		955A1DC52B863A5000B0B520 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3FAA2B6FFF140015348F /* Infra.framework */; };
@@ -66,12 +66,13 @@
 		957F40112B7258180015348F /* ChapterPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F40102B7258180015348F /* ChapterPresentation.swift */; };
 		957F40132B72588F0015348F /* GetChapterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F40122B72588E0015348F /* GetChapterUseCase.swift */; };
 		9591EFE52B881EE9002ACF64 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */; };
-		9591EFE72B881F90002ACF64 /* RegisterPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE62B881F90002ACF64 /* RegisterPresentation.swift */; };
-		9591EFE92B881FAF002ACF64 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE82B881FAF002ACF64 /* RegisterVM.swift */; };
+		9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */; };
+		9591EFE92B881FAF002ACF64 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE82B881FAF002ACF64 /* SignUpVM.swift */; };
 		9591EFEC2B882ABE002ACF64 /* LabelButtonCTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFEB2B882ABE002ACF64 /* LabelButtonCTA.swift */; };
 		9591EFEE2B882C29002ACF64 /* TextFieldMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFED2B882C29002ACF64 /* TextFieldMod.swift */; };
 		95C0F5C82B86DFEE00294C26 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0F5C72B86DFEE00294C26 /* AuthEntity.swift */; };
 		95E40E972B883E1600447243 /* LabelButtonSecondy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E40E962B883E1600447243 /* LabelButtonSecondy.swift */; };
+		95F304732B88F1A3006013C0 /* RegisterUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304722B88F1A3006013C0 /* RegisterUserInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,8 +163,8 @@
 		955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955A1DB12B86222700B0B520 /* SingInPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPresentation.swift; sourceTree = "<group>"; };
 		955A1DB32B8624B000B0B520 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
-		955A1DBA2B86325400B0B520 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
-		955A1DBD2B86337E00B0B520 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		955A1DBA2B86325400B0B520 /* SignInInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInput.swift; sourceTree = "<group>"; };
+		955A1DBD2B86337E00B0B520 /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		955A1DC02B86352000B0B520 /* AuthRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryInterface.swift; sourceTree = "<group>"; };
 		955A1DC32B86382C00B0B520 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		955A1DD12B8665C500B0B520 /* HomePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentation.swift; sourceTree = "<group>"; };
@@ -197,12 +198,13 @@
 		957F40102B7258180015348F /* ChapterPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPresentation.swift; sourceTree = "<group>"; };
 		957F40122B72588E0015348F /* GetChapterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChapterUseCase.swift; sourceTree = "<group>"; };
 		9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
-		9591EFE62B881F90002ACF64 /* RegisterPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresentation.swift; sourceTree = "<group>"; };
-		9591EFE82B881FAF002ACF64 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
+		9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentation.swift; sourceTree = "<group>"; };
+		9591EFE82B881FAF002ACF64 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		9591EFEB2B882ABE002ACF64 /* LabelButtonCTA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonCTA.swift; sourceTree = "<group>"; };
 		9591EFED2B882C29002ACF64 /* TextFieldMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMod.swift; sourceTree = "<group>"; };
 		95C0F5C72B86DFEE00294C26 /* AuthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		95E40E962B883E1600447243 /* LabelButtonSecondy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonSecondy.swift; sourceTree = "<group>"; };
+		95F304722B88F1A3006013C0 /* RegisterUserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,13 +261,13 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
-		955A1DB82B86323300B0B520 /* Auth */ = {
+		955A1DB82B86323300B0B520 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				955A1DBA2B86325400B0B520 /* LoginInput.swift */,
-				955A1DBD2B86337E00B0B520 /* AuthUseCase.swift */,
+				955A1DBA2B86325400B0B520 /* SignInInput.swift */,
+				955A1DBD2B86337E00B0B520 /* SignInUseCase.swift */,
 			);
-			path = Auth;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		955A1DBF2B86350100B0B520 /* AuthRepository */ = {
@@ -284,13 +286,13 @@
 			path = AuthRepository;
 			sourceTree = "<group>";
 		};
-		955A1DCF2B8665B400B0B520 /* Register */ = {
+		955A1DCF2B8665B400B0B520 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				9591EFE62B881F90002ACF64 /* RegisterPresentation.swift */,
-				9591EFE82B881FAF002ACF64 /* RegisterVM.swift */,
+				9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */,
+				9591EFE82B881FAF002ACF64 /* SignUpVM.swift */,
 			);
-			path = Register;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		955A1DD02B8665BA00B0B520 /* Home */ = {
@@ -379,7 +381,7 @@
 			children = (
 				955A1DD02B8665BA00B0B520 /* Home */,
 				955A1DB02B86221500B0B520 /* SignIn */,
-				955A1DCF2B8665B400B0B520 /* Register */,
+				955A1DCF2B8665B400B0B520 /* SignUp */,
 				957F3FBE2B6FFFEA0015348F /* Chapter */,
 				957F3FBD2B6FFFE30015348F /* Book */,
 				957F3FBC2B6FFFCF0015348F /* Bible */,
@@ -398,8 +400,8 @@
 		957F3FA42B6FFEAC0015348F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				9591EFE32B881EC2002ACF64 /* Register */,
-				955A1DB82B86323300B0B520 /* Auth */,
+				9591EFE32B881EC2002ACF64 /* RegisterUser */,
+				955A1DB82B86323300B0B520 /* SignIn */,
 				957F3FC92B7002410015348F /* ReadBible */,
 			);
 			path = UseCases;
@@ -506,12 +508,13 @@
 			path = BibleXML;
 			sourceTree = "<group>";
 		};
-		9591EFE32B881EC2002ACF64 /* Register */ = {
+		9591EFE32B881EC2002ACF64 /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
 				9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */,
+				95F304722B88F1A3006013C0 /* RegisterUserInput.swift */,
 			);
-			path = Register;
+			path = RegisterUser;
 			sourceTree = "<group>";
 		};
 		9591EFEA2B882A14002ACF64 /* Components */ = {
@@ -766,11 +769,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9591EFE52B881EE9002ACF64 /* RegisterUseCase.swift in Sources */,
-				955A1DBB2B86325400B0B520 /* LoginInput.swift in Sources */,
+				955A1DBB2B86325400B0B520 /* SignInInput.swift in Sources */,
 				957F40132B72588F0015348F /* GetChapterUseCase.swift in Sources */,
+				95F304732B88F1A3006013C0 /* RegisterUserInput.swift in Sources */,
 				957F3FCB2B70025B0015348F /* GetBibleUseCase.swift in Sources */,
 				957F40092B724B390015348F /* GetBookUseCase.swift in Sources */,
-				955A1DBE2B86337E00B0B520 /* AuthUseCase.swift in Sources */,
+				955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,12 +803,12 @@
 				957F3FF92B71B8E50015348F /* ContentView.swift in Sources */,
 				957F400F2B7258060015348F /* ChapterVM.swift in Sources */,
 				957F40112B7258180015348F /* ChapterPresentation.swift in Sources */,
-				9591EFE92B881FAF002ACF64 /* RegisterVM.swift in Sources */,
+				9591EFE92B881FAF002ACF64 /* SignUpVM.swift in Sources */,
 				955A1DB42B8624B000B0B520 /* SignInVM.swift in Sources */,
 				955A1DD22B8665C500B0B520 /* HomePresentation.swift in Sources */,
 				957F3FFA2B71B8E50015348F /* Assets.xcassets in Sources */,
 				955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */,
-				9591EFE72B881F90002ACF64 /* RegisterPresentation.swift in Sources */,
+				9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */,
 				9591EFEC2B882ABE002ACF64 /* LabelButtonCTA.swift in Sources */,
 				957F3FFB2B71B8E50015348F /* Preview Assets.xcassets in Sources */,
 			);
