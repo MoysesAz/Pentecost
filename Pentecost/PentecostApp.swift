@@ -16,7 +16,7 @@ struct PentecostApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            BiblePresentation()
+            HomePresentation()
         }
     }
 }
