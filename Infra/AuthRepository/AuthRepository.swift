@@ -19,7 +19,7 @@ public class AuthRepository: AuthRepositoryInterface {
         
         share.createUser(withEmail: email, password: password) { result, error in
             if error != nil {
-                let translateError = self.signInErrors(error: error!)
+                let translateError = self.registerUserErrors(error: error!)
                 completion(.failure(translateError))
             } else {
                 completion(.success(true))

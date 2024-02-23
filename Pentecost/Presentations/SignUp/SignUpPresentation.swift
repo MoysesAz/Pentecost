@@ -28,8 +28,8 @@ struct SignUpPresentation: View {
                 .modifier(TextFieldMod())
             SecureField("ConfirmPassword", text: $vm.confirmPassword)
                 .modifier(TextFieldMod())
-            if vm.errorLogin != "" {
-                Text(vm.errorLogin)
+            if vm.errorRegister != "" {
+                Text(vm.errorRegister)
                     .foregroundStyle(.red)
             }
             
