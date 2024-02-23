@@ -16,16 +16,16 @@ final class SignInVM: ObservableObject {
     @Published public var errorLogin: String = ""
     public var isLoggin: Binding<Bool>
 
-    private let auth: AuthUseCase
+    private let auth: SignInUseCase
 
     public init(isLoggin: Binding<Bool>) {
         let repository = AuthRepository()
-        auth = AuthUseCase(repository: repository)
+        auth = SignInUseCase(repository: repository)
         self.isLoggin = isLoggin
     }
 
     public func singUpEvent() {
-        let login = LoginInput(email: email, password: password)
+        let login = SignInInput(email: email, password: password)
         auth.singIn(login) { result in
             switch result {
             case .success(let result):

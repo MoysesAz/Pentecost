@@ -8,11 +8,11 @@
 import SwiftUI
 import Application
 
-struct RegisterPresentation: View {
-    @ObservedObject var vm: RegisterVM
+struct SignUpPresentation: View {
+    @ObservedObject var vm: SignUpVM
     @State var isRegister: Bool = false
 
-    init(vm: RegisterVM) {
+    init(vm: SignUpVM) {
         self.vm = vm
     }
 

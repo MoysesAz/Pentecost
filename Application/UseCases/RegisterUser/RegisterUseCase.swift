@@ -1,17 +1,24 @@
+//
+//  RegisterUseCase.swift
+//  Application
+//
+//  Created by Moyses Miranda do Vale Azevedo on 22/02/24.
+//
+
 import Foundation
 import Domain
 
-public struct AuthUseCase {
+public struct RegisterUseCase {
     private let repository: AuthRepositoryInterface
 
     public init(repository: AuthRepositoryInterface) {
         self.repository = repository
     }
 
-    public func singIn(_ input: LoginInput,
-                      completion: @escaping (Result<AuthEntity, Error>) -> Void) {
+    public func register(_ input: RegisterUseInput,
+                      completion: @escaping (Result<Bool, Error>) -> Void) {
 
-        repository.singIn(email: input.email, password: input.password) { result in
+        repository.registerUser(email: input.email, password: input.password) { result in
             switch result {
             case .success(let value):
                 completion(.success(value))

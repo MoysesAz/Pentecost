@@ -24,7 +24,7 @@ struct SignInPresentation: View {
     }
 
     var registerView: some View {
-        RegisterPresentation(vm: .init(isRegistering: $isRegistering))
+        SignUpPresentation(vm: .init(isRegistering: $isRegistering))
             .presentationDragIndicator(.visible)
     }
 
