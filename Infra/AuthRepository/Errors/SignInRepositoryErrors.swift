@@ -13,4 +13,5 @@ public enum SignInRepositoryErrors: Error {
     case userDisabled
     case wrongPassword
     case anyExpected
+    case tokenDisabled
 }

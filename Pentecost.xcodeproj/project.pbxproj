@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9503D4BF2B894ADC005767AF /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9503D4BE2B894ADC005767AF /* KeychainSwift */; };
+		9503D4C12B896543005767AF /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9503D4C02B896543005767AF /* KeychainSwift */; };
+		9503D4C52B8A348D005767AF /* SignInTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C42B8A348D005767AF /* SignInTokenUseCase.swift */; };
+		9503D4C72B8A3580005767AF /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C62B8A3580005767AF /* HomeVM.swift */; };
+		9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */; };
 		955A1DA92B8559F400B0B520 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */; };
 		955A1DAD2B85614800B0B520 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 955A1DAC2B85614800B0B520 /* FirebaseStorage */; };
 		955A1DAF2B85732800B0B520 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 955A1DAE2B85732800B0B520 /* FirebaseAnalytics */; };
@@ -164,6 +169,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9503D4C42B8A348D005767AF /* SignInTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTokenUseCase.swift; sourceTree = "<group>"; };
+		9503D4C62B8A3580005767AF /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserSessionUseCase.swift; sourceTree = "<group>"; };
 		955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955A1DB12B86222700B0B520 /* SingInPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPresentation.swift; sourceTree = "<group>"; };
 		955A1DB32B8624B000B0B520 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
@@ -223,6 +231,7 @@
 				957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */,
 				957F3F9A2B6FFDC10015348F /* Application.framework in Frameworks */,
 				955A1DAF2B85732800B0B520 /* FirebaseAnalytics in Frameworks */,
+				9503D4C12B896543005767AF /* KeychainSwift in Frameworks */,
 				957F3FB02B6FFF140015348F /* Infra.framework in Frameworks */,
 				955A1DAD2B85614800B0B520 /* FirebaseStorage in Frameworks */,
 				957F400B2B7251FC0015348F /* SwiftyXMLParser in Frameworks */,
@@ -252,6 +261,7 @@
 			files = (
 				957F3FD82B700A450015348F /* Domain.framework in Frameworks */,
 				955A1DCC2B8642DF00B0B520 /* FirebaseAuth in Frameworks */,
+				9503D4BF2B894ADC005767AF /* KeychainSwift in Frameworks */,
 				957F3FDF2B700B670015348F /* SwiftyXMLParser in Frameworks */,
 				955A1DCE2B8642DF00B0B520 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
@@ -260,6 +270,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9503D4C32B8A347C005767AF /* SignInToken */ = {
+			isa = PBXGroup;
+			children = (
+				9503D4C42B8A348D005767AF /* SignInTokenUseCase.swift */,
+			);
+			path = SignInToken;
+			sourceTree = "<group>";
+		};
+		9503D4C82B8A5658005767AF /* GetAuthenticatedUser */ = {
+			isa = PBXGroup;
+			children = (
+				9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */,
+			);
+			path = GetAuthenticatedUser;
+			sourceTree = "<group>";
+		};
+		950450222B8DA4D100E3B7DB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				955A1DB82B86323300B0B520 /* SignIn */,
+				9591EFE32B881EC2002ACF64 /* RegisterUser */,
+				9503D4C32B8A347C005767AF /* SignInToken */,
+				9503D4C82B8A5658005767AF /* GetAuthenticatedUser */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		955A1DB02B86221500B0B520 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				955A1DD12B8665C500B0B520 /* HomePresentation.swift */,
+				9503D4C62B8A3580005767AF /* HomeVM.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -410,8 +448,7 @@
 		957F3FA42B6FFEAC0015348F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				9591EFE32B881EC2002ACF64 /* RegisterUser */,
-				955A1DB82B86323300B0B520 /* SignIn */,
+				950450222B8DA4D100E3B7DB /* Auth */,
 				957F3FC92B7002410015348F /* ReadBible */,
 			);
 			path = UseCases;
@@ -603,6 +640,7 @@
 				957F400A2B7251FC0015348F /* SwiftyXMLParser */,
 				955A1DAC2B85614800B0B520 /* FirebaseStorage */,
 				955A1DAE2B85732800B0B520 /* FirebaseAnalytics */,
+				9503D4C02B896543005767AF /* KeychainSwift */,
 			);
 			productName = Pentecost;
 			productReference = 957F3F6A2B6FFCD00015348F /* Pentecost.app */;
@@ -670,6 +708,7 @@
 				957F3FDE2B700B670015348F /* SwiftyXMLParser */,
 				955A1DCB2B8642DF00B0B520 /* FirebaseAuth */,
 				955A1DCD2B8642DF00B0B520 /* FirebaseAuthCombine-Community */,
+				9503D4BE2B894ADC005767AF /* KeychainSwift */,
 			);
 			productName = Infra;
 			productReference = 957F3FAA2B6FFF140015348F /* Infra.framework */;
@@ -714,6 +753,7 @@
 			packageReferences = (
 				957F3FDD2B700B350015348F /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
 				955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9503D4BC2B894589005767AF /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 957F3F6B2B6FFCD00015348F /* Products */;
 			projectDirPath = "";
@@ -793,6 +833,8 @@
 				957F40132B72588F0015348F /* GetChapterUseCase.swift in Sources */,
 				95F304732B88F1A3006013C0 /* RegisterUserInput.swift in Sources */,
 				957F3FCB2B70025B0015348F /* GetBibleUseCase.swift in Sources */,
+				9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */,
+				9503D4C52B8A348D005767AF /* SignInTokenUseCase.swift in Sources */,
 				957F40092B724B390015348F /* GetBookUseCase.swift in Sources */,
 				955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */,
 			);
@@ -834,6 +876,7 @@
 				955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */,
 				9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */,
 				9591EFEC2B882ABE002ACF64 /* LabelButtonCTA.swift in Sources */,
+				9503D4C72B8A3580005767AF /* HomeVM.swift in Sources */,
 				957F3FFB2B71B8E50015348F /* Preview Assets.xcassets in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1363,6 +1406,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9503D4BC2B894589005767AF /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
 		955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1382,6 +1433,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9503D4BE2B894ADC005767AF /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9503D4BC2B894589005767AF /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		9503D4C02B896543005767AF /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9503D4BC2B894589005767AF /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
 		955A1DAC2B85614800B0B520 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 955A1DA72B85581D00B0B520 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

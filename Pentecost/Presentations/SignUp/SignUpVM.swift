@@ -17,11 +17,11 @@ final class SignUpVM: ObservableObject {
     @Published public var errorRegister: String = ""
     public var isRegistering: Binding<Bool>
 
-    private let auth: RegisterUseCase
+    private let useCase: RegisterUseCase
 
     public init(isRegistering: Binding<Bool>) {
         let repository = AuthRepository()
-        auth = RegisterUseCase(repository: repository)
+        useCase = RegisterUseCase(repository: repository)
         self.isRegistering = isRegistering
     }
 
@@ -32,7 +32,7 @@ final class SignUpVM: ObservableObject {
         }
 
         let login = RegisterUseInput(email: email, password: password)
-        auth.register(login) { result in
+        useCase.handler(login) { result in
             switch result {
             case .success(let result):
                 self.isRegistering.wrappedValue.toggle()

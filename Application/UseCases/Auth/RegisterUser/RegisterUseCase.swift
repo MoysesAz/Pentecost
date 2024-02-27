@@ -15,7 +15,7 @@ public struct RegisterUseCase {
         self.repository = repository
     }
 
-    public func register(_ input: RegisterUseInput,
+    public func handler(_ input: RegisterUseInput,
                       completion: @escaping (Result<Bool, Error>) -> Void) {
 
         repository.registerUser(email: input.email, password: input.password) { result in
