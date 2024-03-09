@@ -6,19 +6,41 @@
 //
 
 import SwiftUI
+import KeychainSwift
+import Firebase
 
 struct HomePresentation: View {
-    @State private var isLoggin: Bool = false
+    @ObservedObject var vm: HomeVM
+
+
+    init(vm: HomeVM = .init()) {
+        self.vm = vm
+    }
 
     var body: some View {
-        if isLoggin {
-            BiblePresentation()
+        if vm.isLoggin {
+            tabView
         } else {
-            SignInPresentation(vm: .init(isLoggin: $isLoggin))
+            SignInPresentation(vm: .init(isLoggin: vm.isLoggin))
+        }
+    }
+
+    var tabView: some View {
+        TabView {
+            BiblePresentation()
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("Bible")
+                }
+            UserPresentation()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("User")
+                }
         }
     }
 }
 
-#Preview {
-    HomePresentation()
-}
+//#Preview {
+//    HomePresentation()
+//}

@@ -21,6 +21,7 @@ struct BiblePresentation: View {
                     }
                 }
             }
+            .navigationTitle("Books")
         }
     }
 }

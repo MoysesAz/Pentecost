@@ -8,12 +8,12 @@
 import SwiftUI
 
 public struct AuthEntity {
-    public let name: String
-    public let token: String
+    public let email: String
+    public let password: String
 
-    public init(name: String, token: String) {
-        self.name = name
-        self.token = token
+    public init(email: String, password: String) {
+        self.email = email
+        self.password = password
     }
 }
 
