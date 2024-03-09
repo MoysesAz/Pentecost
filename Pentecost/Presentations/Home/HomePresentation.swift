@@ -11,18 +11,32 @@ import Firebase
 
 struct HomePresentation: View {
     @ObservedObject var vm: HomeVM
-    
+
 
     init(vm: HomeVM = .init()) {
         self.vm = vm
-        self.vm.authenticatedUser()
     }
 
     var body: some View {
         if vm.isLoggin {
-            BiblePresentation()
+            tabView
         } else {
             SignInPresentation(vm: .init(isLoggin: vm.isLoggin))
+        }
+    }
+
+    var tabView: some View {
+        TabView {
+            BiblePresentation()
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("Bible")
+                }
+            UserPresentation()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("User")
+                }
         }
     }
 }

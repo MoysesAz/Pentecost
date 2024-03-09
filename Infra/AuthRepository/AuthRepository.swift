@@ -15,6 +15,8 @@ public class AuthRepository: AuthRepositoryInterface {
     private let share: Auth = Auth.auth()
     private let keychain: KeychainSwift = KeychainSwift()
 
+    required public init() {}
+
     public func registerUser(email: String,
                            password: String,
                            completion: @escaping (Result<Bool, Error>) -> Void) {
@@ -30,18 +32,11 @@ public class AuthRepository: AuthRepositoryInterface {
 
     }
 
-    public func getAuthenticatedUser() -> Domain.AuthEntity? {
-        guard let user = share.currentUser else { return nil }
-        return AuthEntity(email: user.email!,
-                          password: user.uid)
-    }
-
     public func signIn(_ token: String, completion: @escaping (Result<Domain.AuthEntity, Error>) -> Void) {
         share.signIn(withCustomToken: token) { result, error in
             if error != nil {
                 let translateError = self.signInErrors(error: error!)
                 completion(.failure(translateError))
-
             } else {
                 guard let refreshToken = result?.user.refreshToken else {
                     completion(.failure(SignInRepositoryErrors.anyExpected))
@@ -86,12 +81,37 @@ public class AuthRepository: AuthRepositoryInterface {
         }
     }
 
-    required public init() {}
-    
-    private func saveTokens(_ token: String, refreshToken: String) {
-        let keychain = KeychainSwift()
-        keychain.set("token", forKey: token)
-        keychain.set("refreshToken", forKey: refreshToken)
+    public func getAuthenticatedUser() -> Domain.AuthEntity? {
+        guard let user = share.currentUser else { return nil }
+        return AuthEntity(email: user.email!,
+                          password: user.uid)
+    }
+
+    public func getAuthenticatedUserObserver(completion: @escaping (Result<Domain.AuthEntity, Error>) -> Void) {
+        share.addStateDidChangeListener { auth, user in
+            guard auth != nil else {
+                completion(.failure(AuthRepositoryError.userNotFound))
+                return
+            }
+
+            guard let user = user  else {
+                completion(.failure(AuthRepositoryError.userNotFound))
+                return
+            }
+
+            let result = AuthEntity(email: user.email!,
+                              password: user.uid)
+
+            completion(.success(result))
+        }
+    }
+
+    public func logout() {
+        do {
+          try share.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
     }
 
 }

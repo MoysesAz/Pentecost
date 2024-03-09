@@ -10,20 +10,29 @@ import Application
 import Infra
 import Domain
 import KeychainSwift
+import Combine
 
 final class HomeVM: ObservableObject {
     @Published public var isLoggin: Bool = false
-    private let useCase: GetAuthenticatedUserUseCase
+    @Published private var authEntity: AuthEntity? = nil
+    private let useCase: GetAuthenticatedUserObserverUseCase
+    @Published public var auth: ()?
 
     public init() {
         let repository = AuthRepository()
-        useCase = GetAuthenticatedUserUseCase(repository: repository)
+        useCase = .init(repository: repository)
+        auth = authenticatedUser()
     }
 
     public func authenticatedUser() {
-        isLoggin = useCase.handler()
+        useCase.handler() { result in
+            switch result {
+            case .failure(let error):
+                self.isLoggin = false
+            case .success(let result):
+                self.authEntity = result
+                self.isLoggin = true
+            }
+        }
     }
-
-
-
 }
