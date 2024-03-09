@@ -24,6 +24,14 @@
 		955BA5D12B9C903700038169 /* UserPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5D02B9C903700038169 /* UserPresentation.swift */; };
 		955BA5D32B9C904900038169 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5D22B9C904900038169 /* UserVM.swift */; };
 		955BA5D72B9CA02300038169 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5D62B9CA02300038169 /* LogoutUseCase.swift */; };
+		955BA5DE2B9CAEF400038169 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955BA5DD2B9CAEF400038169 /* WidgetKit.framework */; };
+		955BA5E02B9CAEF400038169 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955BA5DF2B9CAEF400038169 /* SwiftUI.framework */; };
+		955BA5E32B9CAEF400038169 /* RevisionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5E22B9CAEF400038169 /* RevisionBundle.swift */; };
+		955BA5E52B9CAEF400038169 /* RevisionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5E42B9CAEF400038169 /* RevisionLiveActivity.swift */; };
+		955BA5E72B9CAEF400038169 /* Revision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5E62B9CAEF400038169 /* Revision.swift */; };
+		955BA5E92B9CAEF400038169 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5E82B9CAEF400038169 /* AppIntent.swift */; };
+		955BA5EB2B9CAEF500038169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955BA5EA2B9CAEF500038169 /* Assets.xcassets */; };
+		955BA5EF2B9CAEF500038169 /* RevisionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F712B6FFCD20015348F /* Assets.xcassets */; };
 		957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F742B6FFCD20015348F /* Preview Assets.xcassets */; };
 		957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; };
@@ -93,6 +101,13 @@
 			remoteGlobalIDString = 957F3FA92B6FFF140015348F;
 			remoteInfo = Infra;
 		};
+		955BA5ED2B9CAEF500038169 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957F3F622B6FFCD00015348F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 955BA5DB2B9CAEF400038169;
+			remoteInfo = RevisionExtension;
+		};
 		957F3F842B6FFD1E0015348F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 957F3F622B6FFCD00015348F /* Project object */;
@@ -131,6 +146,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		955BA5F32B9CAEF500038169 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				955BA5EF2B9CAEF500038169 /* RevisionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		957F3F8B2B6FFD1E0015348F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +211,15 @@
 		955BA5D02B9C903700038169 /* UserPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresentation.swift; sourceTree = "<group>"; };
 		955BA5D22B9C904900038169 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		955BA5D62B9CA02300038169 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RevisionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		955BA5DD2B9CAEF400038169 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		955BA5DF2B9CAEF400038169 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		955BA5E22B9CAEF400038169 /* RevisionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionBundle.swift; sourceTree = "<group>"; };
+		955BA5E42B9CAEF400038169 /* RevisionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionLiveActivity.swift; sourceTree = "<group>"; };
+		955BA5E62B9CAEF400038169 /* Revision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Revision.swift; sourceTree = "<group>"; };
+		955BA5E82B9CAEF400038169 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		955BA5EA2B9CAEF500038169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		955BA5EC2B9CAEF500038169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957F3F6A2B6FFCD00015348F /* Pentecost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pentecost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F3F6D2B6FFCD00015348F /* PentecostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentecostApp.swift; sourceTree = "<group>"; };
 		957F3F6F2B6FFCD00015348F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -229,6 +264,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		955BA5D92B9CAEF400038169 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				955BA5E02B9CAEF400038169 /* SwiftUI.framework in Frameworks */,
+				955BA5DE2B9CAEF400038169 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		957F3F672B6FFCD00015348F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +424,19 @@
 			path = Logout;
 			sourceTree = "<group>";
 		};
+		955BA5E12B9CAEF400038169 /* Revision */ = {
+			isa = PBXGroup;
+			children = (
+				955BA5E22B9CAEF400038169 /* RevisionBundle.swift */,
+				955BA5E42B9CAEF400038169 /* RevisionLiveActivity.swift */,
+				955BA5E62B9CAEF400038169 /* Revision.swift */,
+				955BA5E82B9CAEF400038169 /* AppIntent.swift */,
+				955BA5EA2B9CAEF500038169 /* Assets.xcassets */,
+				955BA5EC2B9CAEF500038169 /* Info.plist */,
+			);
+			path = Revision;
+			sourceTree = "<group>";
+		};
 		957F3F612B6FFCD00015348F = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +444,7 @@
 				957F3F812B6FFD1E0015348F /* Domain */,
 				957F3F952B6FFDC10015348F /* Application */,
 				957F3FAB2B6FFF140015348F /* Infra */,
+				955BA5E12B9CAEF400038169 /* Revision */,
 				957F3F6B2B6FFCD00015348F /* Products */,
 				957F3FCE2B7003330015348F /* Frameworks */,
 			);
@@ -399,6 +457,7 @@
 				957F3F802B6FFD1E0015348F /* Domain.framework */,
 				957F3F942B6FFDC10015348F /* Application.framework */,
 				957F3FAA2B6FFF140015348F /* Infra.framework */,
+				955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -554,6 +613,8 @@
 		957F3FCE2B7003330015348F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				955BA5DD2B9CAEF400038169 /* WidgetKit.framework */,
+				955BA5DF2B9CAEF400038169 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -649,6 +710,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		955BA5DB2B9CAEF400038169 /* RevisionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 955BA5F02B9CAEF500038169 /* Build configuration list for PBXNativeTarget "RevisionExtension" */;
+			buildPhases = (
+				955BA5D82B9CAEF400038169 /* Sources */,
+				955BA5D92B9CAEF400038169 /* Frameworks */,
+				955BA5DA2B9CAEF400038169 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RevisionExtension;
+			productName = RevisionExtension;
+			productReference = 955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		957F3F692B6FFCD00015348F /* Pentecost */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 957F3F782B6FFCD20015348F /* Build configuration list for PBXNativeTarget "Pentecost" */;
@@ -657,6 +735,7 @@
 				957F3F682B6FFCD00015348F /* Resources */,
 				957F3F8B2B6FFD1E0015348F /* Embed Frameworks */,
 				957F3FF52B71B8C90015348F /* Sources */,
+				955BA5F32B9CAEF500038169 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -664,6 +743,7 @@
 				957F3F852B6FFD1E0015348F /* PBXTargetDependency */,
 				957F3F992B6FFDC10015348F /* PBXTargetDependency */,
 				957F3FAF2B6FFF140015348F /* PBXTargetDependency */,
+				955BA5EE2B9CAEF500038169 /* PBXTargetDependency */,
 			);
 			name = Pentecost;
 			packageProductDependencies = (
@@ -751,6 +831,9 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					955BA5DB2B9CAEF400038169 = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					957F3F692B6FFCD00015348F = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -790,11 +873,20 @@
 				957F3F7F2B6FFD1E0015348F /* Domain */,
 				957F3F932B6FFDC10015348F /* Application */,
 				957F3FA92B6FFF140015348F /* Infra */,
+				955BA5DB2B9CAEF400038169 /* RevisionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		955BA5DA2B9CAEF400038169 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				955BA5EB2B9CAEF500038169 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		957F3F682B6FFCD00015348F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -833,6 +925,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		955BA5D82B9CAEF400038169 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				955BA5E32B9CAEF400038169 /* RevisionBundle.swift in Sources */,
+				955BA5E92B9CAEF400038169 /* AppIntent.swift in Sources */,
+				955BA5E52B9CAEF400038169 /* RevisionLiveActivity.swift in Sources */,
+				955BA5E72B9CAEF400038169 /* Revision.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		957F3F7C2B6FFD1E0015348F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -920,6 +1023,11 @@
 			target = 957F3FA92B6FFF140015348F /* Infra */;
 			targetProxy = 955A1DC72B863A5000B0B520 /* PBXContainerItemProxy */;
 		};
+		955BA5EE2B9CAEF500038169 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 955BA5DB2B9CAEF400038169 /* RevisionExtension */;
+			targetProxy = 955BA5ED2B9CAEF500038169 /* PBXContainerItemProxy */;
+		};
 		957F3F852B6FFD1E0015348F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 957F3F7F2B6FFD1E0015348F /* Domain */;
@@ -948,6 +1056,70 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		955BA5F12B9CAEF500038169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Revision/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Revision;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Pentecost.Pentecost.Revision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		955BA5F22B9CAEF500038169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GM6XG62S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Revision/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Revision;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.Pentecost.Pentecost.Revision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		957F3F762B6FFCD20015348F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1401,6 +1573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		955BA5F02B9CAEF500038169 /* Build configuration list for PBXNativeTarget "RevisionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				955BA5F12B9CAEF500038169 /* Debug */,
+				955BA5F22B9CAEF500038169 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		957F3F652B6FFCD00015348F /* Build configuration list for PBXProject "Pentecost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
