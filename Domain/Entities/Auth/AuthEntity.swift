@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-public struct AuthEntity {
+public struct AuthEntity: Codable {
     public let email: String
-    public let password: String
+    public let uuid: String
 
-    public init(email: String, password: String) {
+    public init(email: String, uuid: String) {
         self.email = email
-        self.password = password
+        self.uuid = uuid
     }
 }
 
