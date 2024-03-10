@@ -25,9 +25,11 @@ final public class AuthRepository: AuthRepositoryInterface {
             if error != nil {
                 let translateError = self.registerUserErrors(error: error!)
                 completion(.failure(translateError))
-            } else {
-                completion(.success(true))
+                return
             }
+
+            completion(.success(true))
+            return
         }
     }
 
@@ -36,21 +38,22 @@ final public class AuthRepository: AuthRepositoryInterface {
             if error != nil {
                 let translateError = self.signInErrors(error: error!)
                 completion(.failure(translateError))
-            } else {
-                guard let refreshToken = result?.user.refreshToken else {
-                    completion(.failure(SignInRepositoryErrors.anyExpected))
-                    return
-                }
-                self.saveRefreshToken(refreshToken)
-                let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
-
-
-                if self.saveUserKeychain(auth) {
-                    completion(.success(auth))
-                } else {
-                    completion(.failure(SignInRepositoryErrors.anyExpected))
-                }
+                return
             }
+
+            guard let refreshToken = result?.user.refreshToken else {
+                completion(.failure(SignInRepositoryErrors.anyExpected))
+                return
+            }
+            self.saveRefreshToken(refreshToken)
+            let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
+
+            if self.saveUserKeychain(auth) {
+                completion(.success(auth))
+                return
+            }
+
+            completion(.failure(SignInRepositoryErrors.anyExpected))
         }
     }
 
@@ -62,31 +65,35 @@ final public class AuthRepository: AuthRepositoryInterface {
             if error != nil {
                 let translateError = self.signInErrors(error: error!)
                 completion(.failure(translateError))
-            } else {
-
-                result?.user.getIDToken() { token, tokenError  in
-                    if tokenError != nil {
-                        completion(.failure(SignInRepositoryErrors.anyExpected))
-                    } else {
-                        if token != nil {
-                            self.saveAuthToken(token!)
-                        }
-                        completion(.failure(SignInRepositoryErrors.tokenDisabled))
-                    }
-                }
-
-                guard let refreshToken = result?.user.refreshToken else {return }
-
-                self.saveRefreshToken(refreshToken)
-
-                let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
-
-                if self.saveUserKeychain(auth) {
-                    completion(.success(auth))
-                } else {
-                    completion(.failure(SignInRepositoryErrors.anyExpected))
-                }
+                return
             }
+
+            result?.user.getIDToken() { token, tokenError  in
+                if tokenError != nil {
+                    completion(.failure(SignInRepositoryErrors.anyExpected))
+                    return
+                }
+                
+                if token != nil {
+                    self.saveAuthToken(token!)
+                }
+
+                completion(.failure(SignInRepositoryErrors.tokenDisabled))
+                return
+            }
+
+            guard let refreshToken = result?.user.refreshToken else {return }
+
+            self.saveRefreshToken(refreshToken)
+
+            let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
+
+            if self.saveUserKeychain(auth) {
+                completion(.success(auth))
+                return
+            }
+
+            completion(.failure(SignInRepositoryErrors.anyExpected))
         }
     }
 
@@ -97,9 +104,9 @@ final public class AuthRepository: AuthRepositoryInterface {
         if self.saveUserKeychain(auth) {
             return AuthEntity(email: user.email!,
                               uuid: user.uid)
-        } else {
-            return nil
         }
+
+        return nil
     }
 
     public func getAuthenticatedUserObserver(completion: @escaping (Result<Domain.AuthEntity, Error>) -> Void) {
@@ -117,11 +124,8 @@ final public class AuthRepository: AuthRepositoryInterface {
             let auth = AuthEntity(email: user.email!,
                                     uuid: user.uid)
 
-            if self.saveUserKeychain(auth) {
-                completion(.success(auth))
-            } else {
-                completion(.failure(SignInRepositoryErrors.anyExpected))
-            }
+            completion(.success(auth))
+            return
         }
     }
 
