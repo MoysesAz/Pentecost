@@ -3,6 +3,7 @@ import Domain
 
 struct ChapterPresentation: View {
     @ObservedObject var vm: ChapterVM
+    @Environment(\.managedObjectContext) var context
     let numberChapter: Int
 
     init(bookXML: BookXML, number: Int) {
@@ -18,8 +19,12 @@ struct ChapterPresentation: View {
             .onAppear {
                 vm.generationVersesInEnglish()
                 vm.generationVersesInPortugues(numberBook: vm.chapterXMLInEnglish.numberBook, numberChapter: numberChapter)
+                vm.countTime()
             }
 
+        }
+        .onDisappear {
+                vm.addStatisticGoal()
         }
     }
 

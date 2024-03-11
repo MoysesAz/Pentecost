@@ -18,6 +18,7 @@ final class HomeVM: ObservableObject {
     private let useCase: GetAuthenticatedUserObserverUseCase
     @Published public var auth: ()?
 
+
     public init() {
         let repository = AuthRepository()
         useCase = .init(repository: repository)

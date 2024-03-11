@@ -32,6 +32,13 @@
 		955BA5E92B9CAEF400038169 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5E82B9CAEF400038169 /* AppIntent.swift */; };
 		955BA5EB2B9CAEF500038169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955BA5EA2B9CAEF500038169 /* Assets.xcassets */; };
 		955BA5EF2B9CAEF500038169 /* RevisionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		955BA6032B9DFA5200038169 /* StatisticGoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6022B9DFA5200038169 /* StatisticGoalRepository.swift */; };
+		955BA60C2B9DFFC600038169 /* StatisticRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA60B2B9DFFC600038169 /* StatisticRepository.swift */; };
+		955BA60E2B9E008800038169 /* AddSecondsTodayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA60D2B9E008800038169 /* AddSecondsTodayUseCase.swift */; };
+		955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6152B9E22EA00038169 /* CoreDataStack.swift */; };
+		955BA6342B9E989E00038169 /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
+		955BA63B2B9EA66900038169 /* StatisticGoal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */; };
+		955BA63F2B9EA71E00038169 /* StatisticGoal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */; };
 		957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F712B6FFCD20015348F /* Assets.xcassets */; };
 		957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F742B6FFCD20015348F /* Preview Assets.xcassets */; };
 		957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; };
@@ -220,6 +227,13 @@
 		955BA5E82B9CAEF400038169 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		955BA5EA2B9CAEF500038169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		955BA5EC2B9CAEF500038169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		955BA5FC2B9DF4A800038169 /* PentecostData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PentecostData.xcdatamodel; sourceTree = "<group>"; };
+		955BA6022B9DFA5200038169 /* StatisticGoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticGoalRepository.swift; sourceTree = "<group>"; };
+		955BA60B2B9DFFC600038169 /* StatisticRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticRepository.swift; sourceTree = "<group>"; };
+		955BA60D2B9E008800038169 /* AddSecondsTodayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSecondsTodayUseCase.swift; sourceTree = "<group>"; };
+		955BA6152B9E22EA00038169 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		957F3F6A2B6FFCD00015348F /* Pentecost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pentecost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F3F6D2B6FFCD00015348F /* PentecostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentecostApp.swift; sourceTree = "<group>"; };
 		957F3F6F2B6FFCD00015348F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -437,11 +451,78 @@
 			path = Revision;
 			sourceTree = "<group>";
 		};
-		955BA5F42B9D26B400038169 /* Data */ = {
+		955BA5F42B9D26B400038169 /* StatisticRepository */ = {
 			isa = PBXGroup;
 			children = (
+				955BA60B2B9DFFC600038169 /* StatisticRepository.swift */,
 			);
-			path = Data;
+			path = StatisticRepository;
+			sourceTree = "<group>";
+		};
+		955BA5FE2B9DF61800038169 /* InternalMemory */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6012B9DF76A00038169 /* BibleXML */,
+				955BA5FF2B9DF73E00038169 /* StatisticGoalRepository */,
+			);
+			path = InternalMemory;
+			sourceTree = "<group>";
+		};
+		955BA5FF2B9DF73E00038169 /* StatisticGoalRepository */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6022B9DFA5200038169 /* StatisticGoalRepository.swift */,
+			);
+			path = StatisticGoalRepository;
+			sourceTree = "<group>";
+		};
+		955BA6002B9DF75000038169 /* ExternalMemory */ = {
+			isa = PBXGroup;
+			children = (
+				955A1DBF2B86350100B0B520 /* AuthRepository */,
+			);
+			path = ExternalMemory;
+			sourceTree = "<group>";
+		};
+		955BA6012B9DF76A00038169 /* BibleXML */ = {
+			isa = PBXGroup;
+			children = (
+				957F3FCC2B7002920015348F /* BibleXMLRepositoryProtocol.swift */,
+			);
+			path = BibleXML;
+			sourceTree = "<group>";
+		};
+		955BA6042B9DFD6300038169 /* StatisticGoal */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */,
+				955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */,
+			);
+			path = StatisticGoal;
+			sourceTree = "<group>";
+		};
+		955BA6072B9DFF3600038169 /* StatisticGoal */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6082B9DFF4B00038169 /* AddSecondsToday */,
+			);
+			path = StatisticGoal;
+			sourceTree = "<group>";
+		};
+		955BA6082B9DFF4B00038169 /* AddSecondsToday */ = {
+			isa = PBXGroup;
+			children = (
+				955BA60D2B9E008800038169 /* AddSecondsTodayUseCase.swift */,
+			);
+			path = AddSecondsToday;
+			sourceTree = "<group>";
+		};
+		955BA61D2B9E266A00038169 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6152B9E22EA00038169 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		957F3F612B6FFCD00015348F = {
@@ -503,6 +584,7 @@
 		957F3F8C2B6FFD260015348F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				955BA6042B9DFD6300038169 /* StatisticGoal */,
 				95C0F5C62B86DFE100294C26 /* Auth */,
 				957F3FE42B71A43C0015348F /* BibleXML */,
 				957F3FC22B7001720015348F /* Bible */,
@@ -513,8 +595,8 @@
 		957F3F8D2B6FFD2D0015348F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				955A1DBF2B86350100B0B520 /* AuthRepository */,
-				957F3FCC2B7002920015348F /* BibleXMLRepositoryProtocol.swift */,
+				955BA6002B9DF75000038169 /* ExternalMemory */,
+				955BA5FE2B9DF61800038169 /* InternalMemory */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -544,6 +626,7 @@
 		957F3FA42B6FFEAC0015348F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				955BA6072B9DFF3600038169 /* StatisticGoal */,
 				950450222B8DA4D100E3B7DB /* Auth */,
 				957F3FC92B7002410015348F /* ReadBible */,
 			);
@@ -553,11 +636,13 @@
 		957F3FAB2B6FFF140015348F /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				955BA5F42B9D26B400038169 /* Data */,
+				955BA61D2B9E266A00038169 /* CoreData */,
+				955BA5F42B9D26B400038169 /* StatisticRepository */,
 				955A1DC22B86360300B0B520 /* AuthRepository */,
 				957F3FB92B6FFF8A0015348F /* KingJames.xml */,
 				957F3FB82B6FFF8A0015348F /* Almeida.xml */,
 				957F3FD42B70095F0015348F /* Bible */,
+				955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -949,14 +1034,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				957F3FC62B7001910015348F /* Verse.swift in Sources */,
+				955BA63B2B9EA66900038169 /* StatisticGoal+CoreDataProperties.swift in Sources */,
 				957F3FC82B7001970015348F /* Book.swift in Sources */,
 				957F3FE12B705E2A0015348F /* Bible.swift in Sources */,
 				955A1DC12B86352000B0B520 /* AuthRepositoryInterface.swift in Sources */,
+				955BA6032B9DFA5200038169 /* StatisticGoalRepository.swift in Sources */,
 				957F3FE82B71A4560015348F /* BookXML.swift in Sources */,
 				957F3FCD2B7002920015348F /* BibleXMLRepositoryProtocol.swift in Sources */,
 				957F3FEA2B71A4A30015348F /* ChapterXML.swift in Sources */,
 				957F400D2B7257710015348F /* VerseXML.swift in Sources */,
 				957F3FC42B70018B0015348F /* Chapter.swift in Sources */,
+				955BA63F2B9EA71E00038169 /* StatisticGoal+CoreDataClass.swift in Sources */,
 				957F3FE62B71A44A0015348F /* BibleXML.swift in Sources */,
 				95C0F5C82B86DFEE00294C26 /* AuthEntity.swift in Sources */,
 			);
@@ -971,6 +1059,7 @@
 				9516DE8E2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift in Sources */,
 				955A1DBB2B86325400B0B520 /* SignInInput.swift in Sources */,
 				957F40132B72588F0015348F /* GetChapterUseCase.swift in Sources */,
+				955BA60E2B9E008800038169 /* AddSecondsTodayUseCase.swift in Sources */,
 				95F304732B88F1A3006013C0 /* RegisterUserInput.swift in Sources */,
 				957F3FCB2B70025B0015348F /* GetBibleUseCase.swift in Sources */,
 				9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */,
@@ -988,9 +1077,11 @@
 				95A1F40A2B99398100E4A9F0 /* Almeida.xml in Sources */,
 				95F3047D2B89103C006013C0 /* RegisterUserErros.swift in Sources */,
 				955A1DC42B86382C00B0B520 /* AuthRepository.swift in Sources */,
+				955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */,
 				95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */,
 				95F3047A2B890E8E006013C0 /* SignInRepositoryErrors.swift in Sources */,
 				95F304772B88F4B4006013C0 /* AuthRepository+.swift in Sources */,
+				955BA60C2B9DFFC600038169 /* StatisticRepository.swift in Sources */,
 				957F3FD72B7009780015348F /* XmlGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -999,6 +1090,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955BA6342B9E989E00038169 /* PentecostData.xcdatamodeld in Sources */,
 				9591EFEE2B882C29002ACF64 /* TextFieldMod.swift in Sources */,
 				955BA5D32B9C904900038169 /* UserVM.swift in Sources */,
 				957F40052B72496A0015348F /* BookVM.swift in Sources */,
@@ -1696,6 +1788,19 @@
 			productName = SwiftyXMLParser;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				955BA5FC2B9DF4A800038169 /* PentecostData.xcdatamodel */,
+			);
+			currentVersion = 955BA5FC2B9DF4A800038169 /* PentecostData.xcdatamodel */;
+			path = PentecostData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 957F3F622B6FFCD00015348F /* Project object */;
 }

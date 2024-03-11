@@ -2,14 +2,14 @@ import Foundation
 import Domain
 import Infra
 
-public struct LogoutUseCase {
-    private let repository: AuthRepositoryInterface
+public struct AddSecondsTodayUseCase {
+    private let repository: StatisticGoalInterface
 
-    public init(repository: AuthRepositoryInterface) {
+    public init(repository: StatisticGoalInterface) {
         self.repository = repository
     }
 
-    public func handler() {
-        repository.logout()
+    public func handler(_ today: Date, seconds: Int) {
+        repository.addSecondsToday(today: today, seconds: seconds)
     }
 }
