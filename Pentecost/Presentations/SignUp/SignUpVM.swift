@@ -36,7 +36,6 @@ final class SignUpVM: ObservableObject {
             switch result {
             case .success(let result):
                 self.isRegistering.wrappedValue.toggle()
-                print(result)
             case .failure(let error):
                 let translateError = error as! RegisterUserErros
                 self.handleRegisterUserError(translateError)

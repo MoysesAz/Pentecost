@@ -15,9 +15,9 @@ import Combine
 final class HomeVM: ObservableObject {
     @Published public var isLoggin: Bool = false
     @Published private var authEntity: AuthEntity? = nil
-    private let useCase: GetAuthenticatedUserObserverUseCase
     @Published public var auth: ()?
-
+    private let useCase: GetAuthenticatedUserObserverUseCase
+    @Published public var inAnimationTabView: Bool = true
 
     public init() {
         let repository = AuthRepository()
@@ -32,7 +32,11 @@ final class HomeVM: ObservableObject {
                 self.isLoggin = false
             case .success(let result):
                 self.authEntity = result
-                self.isLoggin = true
+                DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.async {
+                        self.isLoggin = true
+                    }
+                }
             }
         }
     }

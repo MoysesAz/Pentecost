@@ -10,6 +10,15 @@ public struct AddSecondsTodayUseCase {
     }
 
     public func handler(_ today: Date, seconds: Int) {
-        repository.addSecondsToday(today: today, seconds: seconds)
+        let statisticGoal = repository.read(today)
+
+        guard let statisticGoal = statisticGoal else {
+            repository.create(today, seconds: seconds, goal: false, upload: false)
+            return
+        }
+
+        let secondsEntity = Int(statisticGoal.seconds) + seconds
+
+        repository.upload(statisticGoal, goal: false, seconds: secondsEntity, upload: false)
     }
 }

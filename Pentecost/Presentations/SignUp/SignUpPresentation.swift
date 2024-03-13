@@ -34,10 +34,8 @@ struct SignUpPresentation: View {
                     .foregroundStyle(.red)
             }
             
-            Button {
+            ButtonCTA("Register") {
                 vm.registerEvent()
-            }label: {
-                LabelButtonCTA("Register")
             }
         }
     }

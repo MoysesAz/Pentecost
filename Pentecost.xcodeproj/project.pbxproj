@@ -39,6 +39,11 @@
 		955BA6342B9E989E00038169 /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
 		955BA63B2B9EA66900038169 /* StatisticGoal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */; };
 		955BA63F2B9EA71E00038169 /* StatisticGoal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */; };
+		955BA6422B9EBE4300038169 /* StatisticsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6412B9EBE4300038169 /* StatisticsPresentation.swift */; };
+		955BA6442B9EBE6200038169 /* StatisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6432B9EBE6200038169 /* StatisticsVM.swift */; };
+		955BA6462B9EC55D00038169 /* StatisticsGoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6452B9EC55D00038169 /* StatisticsGoalData.swift */; };
+		955BA6492B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */; };
+		955FB4C92BA13D3600E52E40 /* ButtonCTAVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FB4C82BA13D3600E52E40 /* ButtonCTAVM.swift */; };
 		957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F712B6FFCD20015348F /* Assets.xcassets */; };
 		957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F742B6FFCD20015348F /* Preview Assets.xcassets */; };
 		957F3F862B6FFD1E0015348F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; };
@@ -81,7 +86,7 @@
 		9591EFE52B881EE9002ACF64 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */; };
 		9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */; };
 		9591EFE92B881FAF002ACF64 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE82B881FAF002ACF64 /* SignUpVM.swift */; };
-		9591EFEC2B882ABE002ACF64 /* LabelButtonCTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFEB2B882ABE002ACF64 /* LabelButtonCTA.swift */; };
+		9591EFEC2B882ABE002ACF64 /* ButtonCTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFEB2B882ABE002ACF64 /* ButtonCTA.swift */; };
 		9591EFEE2B882C29002ACF64 /* TextFieldMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFED2B882C29002ACF64 /* TextFieldMod.swift */; };
 		959F46C22B9917DD009D8787 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 959F46C12B9917DD009D8787 /* KeychainSwift */; };
 		959F46C42B9917F5009D8787 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 959F46C32B9917F5009D8787 /* SwiftyXMLParser */; };
@@ -234,6 +239,11 @@
 		955BA6152B9E22EA00038169 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		955BA6412B9EBE4300038169 /* StatisticsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPresentation.swift; sourceTree = "<group>"; };
+		955BA6432B9EBE6200038169 /* StatisticsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVM.swift; sourceTree = "<group>"; };
+		955BA6452B9EC55D00038169 /* StatisticsGoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsGoalData.swift; sourceTree = "<group>"; };
+		955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllStatisticsGoalsUseCase.swift; sourceTree = "<group>"; };
+		955FB4C82BA13D3600E52E40 /* ButtonCTAVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCTAVM.swift; sourceTree = "<group>"; };
 		957F3F6A2B6FFCD00015348F /* Pentecost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pentecost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F3F6D2B6FFCD00015348F /* PentecostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentecostApp.swift; sourceTree = "<group>"; };
 		957F3F6F2B6FFCD00015348F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -266,7 +276,7 @@
 		9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentation.swift; sourceTree = "<group>"; };
 		9591EFE82B881FAF002ACF64 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
-		9591EFEB2B882ABE002ACF64 /* LabelButtonCTA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonCTA.swift; sourceTree = "<group>"; };
+		9591EFEB2B882ABE002ACF64 /* ButtonCTA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCTA.swift; sourceTree = "<group>"; };
 		9591EFED2B882C29002ACF64 /* TextFieldMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMod.swift; sourceTree = "<group>"; };
 		95C0F5C72B86DFEE00294C26 /* AuthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		95E40E962B883E1600447243 /* LabelButtonSecondy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonSecondy.swift; sourceTree = "<group>"; };
@@ -459,13 +469,13 @@
 			path = StatisticRepository;
 			sourceTree = "<group>";
 		};
-		955BA5FE2B9DF61800038169 /* InternalMemory */ = {
+		955BA5FE2B9DF61800038169 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
 				955BA6012B9DF76A00038169 /* BibleXML */,
 				955BA5FF2B9DF73E00038169 /* StatisticGoalRepository */,
 			);
-			path = InternalMemory;
+			path = Memory;
 			sourceTree = "<group>";
 		};
 		955BA5FF2B9DF73E00038169 /* StatisticGoalRepository */ = {
@@ -476,12 +486,12 @@
 			path = StatisticGoalRepository;
 			sourceTree = "<group>";
 		};
-		955BA6002B9DF75000038169 /* ExternalMemory */ = {
+		955BA6002B9DF75000038169 /* Cloud */ = {
 			isa = PBXGroup;
 			children = (
 				955A1DBF2B86350100B0B520 /* AuthRepository */,
 			);
-			path = ExternalMemory;
+			path = Cloud;
 			sourceTree = "<group>";
 		};
 		955BA6012B9DF76A00038169 /* BibleXML */ = {
@@ -504,6 +514,7 @@
 		955BA6072B9DFF3600038169 /* StatisticGoal */ = {
 			isa = PBXGroup;
 			children = (
+				955BA6472B9ECA5800038169 /* GetAllStatisticsGoals */,
 				955BA6082B9DFF4B00038169 /* AddSecondsToday */,
 			);
 			path = StatisticGoal;
@@ -523,6 +534,33 @@
 				955BA6152B9E22EA00038169 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		955BA6402B9EBE2D00038169 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6412B9EBE4300038169 /* StatisticsPresentation.swift */,
+				955BA6432B9EBE6200038169 /* StatisticsVM.swift */,
+				955BA6452B9EC55D00038169 /* StatisticsGoalData.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		955BA6472B9ECA5800038169 /* GetAllStatisticsGoals */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */,
+			);
+			path = GetAllStatisticsGoals;
+			sourceTree = "<group>";
+		};
+		955FB4C72BA13D1D00E52E40 /* ButtonCTA */ = {
+			isa = PBXGroup;
+			children = (
+				9591EFEB2B882ABE002ACF64 /* ButtonCTA.swift */,
+				955FB4C82BA13D3600E52E40 /* ButtonCTAVM.swift */,
+			);
+			path = ButtonCTA;
 			sourceTree = "<group>";
 		};
 		957F3F612B6FFCD00015348F = {
@@ -595,8 +633,8 @@
 		957F3F8D2B6FFD2D0015348F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6002B9DF75000038169 /* ExternalMemory */,
-				955BA5FE2B9DF61800038169 /* InternalMemory */,
+				955BA6002B9DF75000038169 /* Cloud */,
+				955BA5FE2B9DF61800038169 /* Memory */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -604,6 +642,7 @@
 		957F3F8E2B6FFDA30015348F /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				955BA6402B9EBE2D00038169 /* Statistics */,
 				955A1DD02B8665BA00B0B520 /* Home */,
 				955BA5CF2B9C901D00038169 /* User */,
 				955A1DB02B86221500B0B520 /* SignIn */,
@@ -751,7 +790,7 @@
 		9591EFEA2B882A14002ACF64 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9591EFEB2B882ABE002ACF64 /* LabelButtonCTA.swift */,
+				955FB4C72BA13D1D00E52E40 /* ButtonCTA */,
 				9591EFED2B882C29002ACF64 /* TextFieldMod.swift */,
 				95E40E962B883E1600447243 /* LabelButtonSecondy.swift */,
 			);
@@ -1064,6 +1103,7 @@
 				957F3FCB2B70025B0015348F /* GetBibleUseCase.swift in Sources */,
 				9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */,
 				9503D4C52B8A348D005767AF /* SignInTokenUseCase.swift in Sources */,
+				955BA6492B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift in Sources */,
 				957F40092B724B390015348F /* GetBookUseCase.swift in Sources */,
 				955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */,
 			);
@@ -1090,6 +1130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955BA6422B9EBE4300038169 /* StatisticsPresentation.swift in Sources */,
+				955BA6462B9EC55D00038169 /* StatisticsGoalData.swift in Sources */,
 				955BA6342B9E989E00038169 /* PentecostData.xcdatamodeld in Sources */,
 				9591EFEE2B882C29002ACF64 /* TextFieldMod.swift in Sources */,
 				955BA5D32B9C904900038169 /* UserVM.swift in Sources */,
@@ -1103,13 +1145,15 @@
 				957F400F2B7258060015348F /* ChapterVM.swift in Sources */,
 				957F40112B7258180015348F /* ChapterPresentation.swift in Sources */,
 				9591EFE92B881FAF002ACF64 /* SignUpVM.swift in Sources */,
+				955FB4C92BA13D3600E52E40 /* ButtonCTAVM.swift in Sources */,
 				955A1DB42B8624B000B0B520 /* SignInVM.swift in Sources */,
 				955A1DD22B8665C500B0B520 /* HomePresentation.swift in Sources */,
 				957F3FFA2B71B8E50015348F /* Assets.xcassets in Sources */,
 				955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */,
 				9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */,
+				955BA6442B9EBE6200038169 /* StatisticsVM.swift in Sources */,
 				955BA5D12B9C903700038169 /* UserPresentation.swift in Sources */,
-				9591EFEC2B882ABE002ACF64 /* LabelButtonCTA.swift in Sources */,
+				9591EFEC2B882ABE002ACF64 /* ButtonCTA.swift in Sources */,
 				9503D4C72B8A3580005767AF /* HomeVM.swift in Sources */,
 				957F3FFB2B71B8E50015348F /* Preview Assets.xcassets in Sources */,
 			);

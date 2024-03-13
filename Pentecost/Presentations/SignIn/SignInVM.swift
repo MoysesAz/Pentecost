@@ -14,8 +14,14 @@ final class SignInVM: ObservableObject {
     @Published public var email: String = ""
     @Published public var password: String = ""
     @Published public var errorLogin: String = ""
-    public var isLoggin: Bool
+    public var disable: Bool {
+        get {
+            email == "" || password == "" ? true : false
+        }
+    }
 
+    public var isLoading: Bool = false
+    public var isLoggin: Bool
     private let useCase: SignInUseCase
 
     public init(isLoggin: Bool) {
@@ -24,15 +30,17 @@ final class SignInVM: ObservableObject {
         self.isLoggin = isLoggin
     }
 
-    public func singUpEvent() {
+    public func singInEvent() {
+        isLoading = true
         let login = SignInInput(email: email, password: password)
         useCase.handler(login) { result in
             switch result {
             case .success(let result):
                 self.isLoggin.toggle()
-                print(result)
+                self.isLoading = false
             case .failure(let error):
                 self.errorLogin = "Email ou Senha incorretos"
+                self.isLoading = false
             }
         }
     }
