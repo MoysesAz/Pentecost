@@ -22,6 +22,7 @@ struct BookPresentation: View {
                     }
                 }
             }
+            .navigationTitle(vm.bookXML.name)
         }
     }
 }

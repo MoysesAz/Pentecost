@@ -16,6 +16,7 @@ struct ChapterPresentation: View {
             VStack{
                 verses
             }
+            .navigationTitle("Chapter \(numberChapter)")
             .onAppear {
                 vm.generationVersesInEnglish()
                 vm.generationVersesInPortugues(numberBook: vm.chapterXMLInEnglish.numberBook, numberChapter: numberChapter)
