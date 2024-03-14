@@ -390,6 +390,8 @@
 		9538668A2BA31C21002D22AC /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				957F3FE42B71A43C0015348F /* BibleXML */,
+				957F3FC22B7001720015348F /* Bible */,
 			);
 			path = Memory;
 			sourceTree = "<group>";
@@ -641,8 +643,6 @@
 			children = (
 				9538668A2BA31C21002D22AC /* Memory */,
 				953866892BA31C14002D22AC /* Cloud */,
-				957F3FE42B71A43C0015348F /* BibleXML */,
-				957F3FC22B7001720015348F /* Bible */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
