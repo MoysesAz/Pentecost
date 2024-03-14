@@ -7,7 +7,4 @@ public protocol StatisticGoalInterface {
     func read(_ day:  Date) -> StatisticGoal?
     func readAll() -> [StatisticGoal]
     func delete(_ entity: StatisticGoal)
-
-
-    // essa funcao vai checar se hoje a meta foi batica caso nao o botao continua vermelho caso sim verifica se ja foi upado caso nao tenha sido ele upa e modifica para upado e fica verde
 }
