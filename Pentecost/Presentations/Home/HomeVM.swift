@@ -16,8 +16,8 @@ final class HomeVM: ObservableObject {
     @Published public var isLoggin: Bool = false
     @Published private var authEntity: AuthEntity? = nil
     @Published public var auth: ()?
-    private let useCase: GetAuthenticatedUserObserverUseCase
     @Published public var inAnimationTabView: Bool = true
+    private let useCase: GetAuthenticatedUserObserverUseCase
 
     public init() {
         let repository = AuthRepository()
