@@ -4,10 +4,10 @@ import Infra
 import Domain
 
 final class StatisticsVM: ObservableObject {
-    private let useCase: GetAllStatisticsGoalsUseCase
+    private let useCase: GetAllReadingStatisticsUseCase
 
     public init() {
-        let repository = StatisticRepository()
+        let repository = ReadingStatisticsRepository()
         useCase = .init(repository: repository)
     }
 

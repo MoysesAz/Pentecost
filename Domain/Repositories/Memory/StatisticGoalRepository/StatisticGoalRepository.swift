@@ -1,10 +1,10 @@
 import Foundation
 
-public protocol StatisticGoalInterface {
+public protocol ReadingStatisticsInterface {
     init ()
     func create(_ day: Date, seconds: Int, goal: Bool, upload: Bool)
-    func upload(_ entity: StatisticGoal, goal: Bool, seconds: Int, upload: Bool)
-    func read(_ day:  Date) -> StatisticGoal?
-    func readAll() -> [StatisticGoal]
-    func delete(_ entity: StatisticGoal)
+    func upload(_ entity: ReadingStatistics , goal: Bool, seconds: Int, upload: Bool)
+    func read(_ day:  Date) -> ReadingStatistics?
+    func readAll() -> [ReadingStatistics]
+    func delete(_ entity: ReadingStatistics)
 }

@@ -11,6 +11,9 @@
 		9503D4C72B8A3580005767AF /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C62B8A3580005767AF /* HomeVM.swift */; };
 		9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */; };
 		9516DE8E2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9516DE8D2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift */; };
+		9538668F2BA31C83002D22AC /* ReadingStatistics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538668B2BA31C5F002D22AC /* ReadingStatistics+CoreDataClass.swift */; };
+		953866902BA31C83002D22AC /* ReadingStatistics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538668C2BA31C5F002D22AC /* ReadingStatistics+CoreDataProperties.swift */; };
+		953866912BA31D15002D22AC /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
 		955A1DA92B8559F400B0B520 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */; };
 		955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB12B86222700B0B520 /* SingInPresentation.swift */; };
 		955A1DB42B8624B000B0B520 /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB32B8624B000B0B520 /* SignInVM.swift */; };
@@ -33,16 +36,14 @@
 		955BA5EB2B9CAEF500038169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955BA5EA2B9CAEF500038169 /* Assets.xcassets */; };
 		955BA5EF2B9CAEF500038169 /* RevisionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 955BA5DC2B9CAEF400038169 /* RevisionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		955BA6032B9DFA5200038169 /* StatisticGoalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6022B9DFA5200038169 /* StatisticGoalRepository.swift */; };
-		955BA60C2B9DFFC600038169 /* StatisticRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA60B2B9DFFC600038169 /* StatisticRepository.swift */; };
+		955BA60C2B9DFFC600038169 /* ReadingStatisticsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA60B2B9DFFC600038169 /* ReadingStatisticsRepository.swift */; };
 		955BA60E2B9E008800038169 /* AddSecondsTodayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA60D2B9E008800038169 /* AddSecondsTodayUseCase.swift */; };
 		955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6152B9E22EA00038169 /* CoreDataStack.swift */; };
 		955BA6342B9E989E00038169 /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
-		955BA63B2B9EA66900038169 /* StatisticGoal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */; };
-		955BA63F2B9EA71E00038169 /* StatisticGoal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */; };
 		955BA6422B9EBE4300038169 /* StatisticsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6412B9EBE4300038169 /* StatisticsPresentation.swift */; };
 		955BA6442B9EBE6200038169 /* StatisticsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6432B9EBE6200038169 /* StatisticsVM.swift */; };
 		955BA6462B9EC55D00038169 /* StatisticsGoalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6452B9EC55D00038169 /* StatisticsGoalData.swift */; };
-		955BA6492B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */; };
+		955BA6492B9ECA7F00038169 /* GetAllReadingStatisticsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955BA6482B9ECA7F00038169 /* GetAllReadingStatisticsUseCase.swift */; };
 		955FB4C92BA13D3600E52E40 /* ButtonCTAVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955FB4C82BA13D3600E52E40 /* ButtonCTAVM.swift */; };
 		957F3F722B6FFCD20015348F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F712B6FFCD20015348F /* Assets.xcassets */; };
 		957F3F752B6FFCD20015348F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957F3F742B6FFCD20015348F /* Preview Assets.xcassets */; };
@@ -212,6 +213,8 @@
 		9503D4C62B8A3580005767AF /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserSessionUseCase.swift; sourceTree = "<group>"; };
 		9516DE8D2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthenticatedUserObserverUseCase.swift; sourceTree = "<group>"; };
+		9538668B2BA31C5F002D22AC /* ReadingStatistics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingStatistics+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9538668C2BA31C5F002D22AC /* ReadingStatistics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingStatistics+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955A1DB12B86222700B0B520 /* SingInPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPresentation.swift; sourceTree = "<group>"; };
 		955A1DB32B8624B000B0B520 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
@@ -234,15 +237,13 @@
 		955BA5EC2B9CAEF500038169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955BA5FC2B9DF4A800038169 /* PentecostData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PentecostData.xcdatamodel; sourceTree = "<group>"; };
 		955BA6022B9DFA5200038169 /* StatisticGoalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticGoalRepository.swift; sourceTree = "<group>"; };
-		955BA60B2B9DFFC600038169 /* StatisticRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticRepository.swift; sourceTree = "<group>"; };
+		955BA60B2B9DFFC600038169 /* ReadingStatisticsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingStatisticsRepository.swift; sourceTree = "<group>"; };
 		955BA60D2B9E008800038169 /* AddSecondsTodayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSecondsTodayUseCase.swift; sourceTree = "<group>"; };
 		955BA6152B9E22EA00038169 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatisticGoal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		955BA6412B9EBE4300038169 /* StatisticsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPresentation.swift; sourceTree = "<group>"; };
 		955BA6432B9EBE6200038169 /* StatisticsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVM.swift; sourceTree = "<group>"; };
 		955BA6452B9EC55D00038169 /* StatisticsGoalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsGoalData.swift; sourceTree = "<group>"; };
-		955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllStatisticsGoalsUseCase.swift; sourceTree = "<group>"; };
+		955BA6482B9ECA7F00038169 /* GetAllReadingStatisticsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllReadingStatisticsUseCase.swift; sourceTree = "<group>"; };
 		955FB4C82BA13D3600E52E40 /* ButtonCTAVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCTAVM.swift; sourceTree = "<group>"; };
 		957F3F6A2B6FFCD00015348F /* Pentecost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pentecost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957F3F6D2B6FFCD00015348F /* PentecostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentecostApp.swift; sourceTree = "<group>"; };
@@ -377,6 +378,22 @@
 			path = GetAuthenticatedUserObserver;
 			sourceTree = "<group>";
 		};
+		953866892BA31C14002D22AC /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				955BA6042B9DFD6300038169 /* ReadingStatistics  */,
+				95C0F5C62B86DFE100294C26 /* Auth */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
+		9538668A2BA31C21002D22AC /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
 		955A1DB02B86221500B0B520 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,12 +478,12 @@
 			path = Revision;
 			sourceTree = "<group>";
 		};
-		955BA5F42B9D26B400038169 /* StatisticRepository */ = {
+		955BA5F42B9D26B400038169 /* ReadingStatisticsRepository  */ = {
 			isa = PBXGroup;
 			children = (
-				955BA60B2B9DFFC600038169 /* StatisticRepository.swift */,
+				955BA60B2B9DFFC600038169 /* ReadingStatisticsRepository.swift */,
 			);
-			path = StatisticRepository;
+			path = "ReadingStatisticsRepository ";
 			sourceTree = "<group>";
 		};
 		955BA5FE2B9DF61800038169 /* Memory */ = {
@@ -502,22 +519,22 @@
 			path = BibleXML;
 			sourceTree = "<group>";
 		};
-		955BA6042B9DFD6300038169 /* StatisticGoal */ = {
+		955BA6042B9DFD6300038169 /* ReadingStatistics  */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6362B9EA65A00038169 /* StatisticGoal+CoreDataClass.swift */,
-				955BA6372B9EA65A00038169 /* StatisticGoal+CoreDataProperties.swift */,
+				9538668B2BA31C5F002D22AC /* ReadingStatistics+CoreDataClass.swift */,
+				9538668C2BA31C5F002D22AC /* ReadingStatistics+CoreDataProperties.swift */,
 			);
-			path = StatisticGoal;
+			path = "ReadingStatistics ";
 			sourceTree = "<group>";
 		};
-		955BA6072B9DFF3600038169 /* StatisticGoal */ = {
+		955BA6072B9DFF3600038169 /* ReadingStatistics */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6472B9ECA5800038169 /* GetAllStatisticsGoals */,
+				955BA6472B9ECA5800038169 /* GetAllReadingStatistics */,
 				955BA6082B9DFF4B00038169 /* AddSecondsToday */,
 			);
-			path = StatisticGoal;
+			path = ReadingStatistics;
 			sourceTree = "<group>";
 		};
 		955BA6082B9DFF4B00038169 /* AddSecondsToday */ = {
@@ -546,12 +563,12 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		955BA6472B9ECA5800038169 /* GetAllStatisticsGoals */ = {
+		955BA6472B9ECA5800038169 /* GetAllReadingStatistics */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6482B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift */,
+				955BA6482B9ECA7F00038169 /* GetAllReadingStatisticsUseCase.swift */,
 			);
-			path = GetAllStatisticsGoals;
+			path = GetAllReadingStatistics;
 			sourceTree = "<group>";
 		};
 		955FB4C72BA13D1D00E52E40 /* ButtonCTA */ = {
@@ -622,8 +639,8 @@
 		957F3F8C2B6FFD260015348F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6042B9DFD6300038169 /* StatisticGoal */,
-				95C0F5C62B86DFE100294C26 /* Auth */,
+				9538668A2BA31C21002D22AC /* Memory */,
+				953866892BA31C14002D22AC /* Cloud */,
 				957F3FE42B71A43C0015348F /* BibleXML */,
 				957F3FC22B7001720015348F /* Bible */,
 			);
@@ -665,7 +682,7 @@
 		957F3FA42B6FFEAC0015348F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				955BA6072B9DFF3600038169 /* StatisticGoal */,
+				955BA6072B9DFF3600038169 /* ReadingStatistics */,
 				950450222B8DA4D100E3B7DB /* Auth */,
 				957F3FC92B7002410015348F /* ReadBible */,
 			);
@@ -676,7 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				955BA61D2B9E266A00038169 /* CoreData */,
-				955BA5F42B9D26B400038169 /* StatisticRepository */,
+				955BA5F42B9D26B400038169 /* ReadingStatisticsRepository  */,
 				955A1DC22B86360300B0B520 /* AuthRepository */,
 				957F3FB92B6FFF8A0015348F /* KingJames.xml */,
 				957F3FB82B6FFF8A0015348F /* Almeida.xml */,
@@ -1072,8 +1089,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9538668F2BA31C83002D22AC /* ReadingStatistics+CoreDataClass.swift in Sources */,
+				953866902BA31C83002D22AC /* ReadingStatistics+CoreDataProperties.swift in Sources */,
 				957F3FC62B7001910015348F /* Verse.swift in Sources */,
-				955BA63B2B9EA66900038169 /* StatisticGoal+CoreDataProperties.swift in Sources */,
 				957F3FC82B7001970015348F /* Book.swift in Sources */,
 				957F3FE12B705E2A0015348F /* Bible.swift in Sources */,
 				955A1DC12B86352000B0B520 /* AuthRepositoryInterface.swift in Sources */,
@@ -1083,7 +1101,6 @@
 				957F3FEA2B71A4A30015348F /* ChapterXML.swift in Sources */,
 				957F400D2B7257710015348F /* VerseXML.swift in Sources */,
 				957F3FC42B70018B0015348F /* Chapter.swift in Sources */,
-				955BA63F2B9EA71E00038169 /* StatisticGoal+CoreDataClass.swift in Sources */,
 				957F3FE62B71A44A0015348F /* BibleXML.swift in Sources */,
 				95C0F5C82B86DFEE00294C26 /* AuthEntity.swift in Sources */,
 			);
@@ -1103,7 +1120,7 @@
 				957F3FCB2B70025B0015348F /* GetBibleUseCase.swift in Sources */,
 				9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */,
 				9503D4C52B8A348D005767AF /* SignInTokenUseCase.swift in Sources */,
-				955BA6492B9ECA7F00038169 /* GetAllStatisticsGoalsUseCase.swift in Sources */,
+				955BA6492B9ECA7F00038169 /* GetAllReadingStatisticsUseCase.swift in Sources */,
 				957F40092B724B390015348F /* GetBookUseCase.swift in Sources */,
 				955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */,
 			);
@@ -1113,6 +1130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953866912BA31D15002D22AC /* PentecostData.xcdatamodeld in Sources */,
 				95A1F4092B99398100E4A9F0 /* KingJames.xml in Sources */,
 				95A1F40A2B99398100E4A9F0 /* Almeida.xml in Sources */,
 				95F3047D2B89103C006013C0 /* RegisterUserErros.swift in Sources */,
@@ -1121,7 +1139,7 @@
 				95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */,
 				95F3047A2B890E8E006013C0 /* SignInRepositoryErrors.swift in Sources */,
 				95F304772B88F4B4006013C0 /* AuthRepository+.swift in Sources */,
-				955BA60C2B9DFFC600038169 /* StatisticRepository.swift in Sources */,
+				955BA60C2B9DFFC600038169 /* ReadingStatisticsRepository.swift in Sources */,
 				957F3FD72B7009780015348F /* XmlGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,7 +45,7 @@ final class ChapterVM: ObservableObject {
     }
 
     public func addStatisticGoal() {
-        let repository = StatisticRepository()
+        let repository = ReadingStatisticsRepository()
         let useCase = AddSecondsTodayUseCase(repository: repository)
         let secondsInChapter = Int(Date().timeIntervalSince(self.startChapter))
         let date = ChapterVM.createDateNow()

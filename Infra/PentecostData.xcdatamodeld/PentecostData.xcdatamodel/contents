@@ -5,7 +5,7 @@
         <attribute name="readingTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="update" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
-    <entity name="StatisticGoal" representedClassName="StatisticGoal" syncable="YES" codeGenerationType="class">
+    <entity name="ReadingStatistics" representedClassName="ReadingStatistics" syncable="YES" codeGenerationType="class">
         <attribute name="day" attributeType="Date" usesScalarValueType="NO">
             <userInfo>
                 <entry key="day" value="value"/>

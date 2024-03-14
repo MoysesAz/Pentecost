@@ -8,14 +8,14 @@
 import Foundation
 import Domain
 
-public struct GetAllStatisticsGoalsUseCase {
-    private let repository: StatisticGoalInterface
+public struct GetAllReadingStatisticsUseCase {
+    private let repository: ReadingStatisticsInterface
 
-    public init(repository: StatisticGoalInterface) {
+    public init(repository: ReadingStatisticsInterface) {
         self.repository = repository
     }
 
-    public func handler() -> [StatisticGoal] {
+    public func handler() -> [ReadingStatistics] {
         return repository.readAll()
     }
 }
