@@ -1,4 +1,5 @@
 import Foundation
+import CoreData
 import SwiftyXMLParser
 import Domain
 import Application
@@ -9,13 +10,13 @@ final class ChapterVM: ObservableObject {
     var chapterXMLInPortugues: ChapterXML?
     @Published var versesInEnglish: [Int: String] = [:]
     @Published var versesInPortugues: [Int: String] = [:]
+    var startChapter: Date
 
     init(bookXML: BookXML, number: Int) {
-        let repository = XmlGenerator()
-        let useCase = GetChapterUseCase(repository: repository)
-        let useCaseBibleInEnglish = GetBibleUseCase(repository: repository)
-        let useCaseChapterInEnglish = GetChapterUseCase(repository: repository)
+        let xmlGeneratorRepository = XmlGenerator()
+        let useCaseChapterInEnglish = GetChapterUseCase(repository: xmlGeneratorRepository)
         self.chapterXMLInEnglish = useCaseChapterInEnglish.handler(bookXML: bookXML, number: number)
+        startChapter = Date()
     }
 
     public func generationVersesInEnglish() {
@@ -43,4 +44,24 @@ final class ChapterVM: ObservableObject {
         versesInPortugues = verses
     }
 
+    public func addStatisticGoal() {
+        let repository = ReadingStatisticsRepository()
+        let useCase = AddSecondsTodayUseCase(repository: repository)
+        let secondsInChapter = Int(Date().timeIntervalSince(self.startChapter))
+        let date = ChapterVM.createDateNow()
+        useCase.handler(date, seconds: secondsInChapter)
+    }
+
+    static func createDateNow() -> Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+        guard let newData = calendar.date(from: components) else {
+            fatalError("Erro ao criar a nova data")
+        }
+        return newData
+    }
+
+    func countTime() {
+        startChapter = Date()
+    }
 }

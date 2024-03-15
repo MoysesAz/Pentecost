@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Firebase
+import Infra
+import CoreData
 
 @main
 struct PentecostApp: App {

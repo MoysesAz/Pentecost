@@ -40,10 +40,9 @@ struct SignInPresentation: View {
                     .foregroundStyle(.red)
             }
 
-            Button {
-                vm.singUpEvent()
-            } label: {
-                LabelButtonCTA("Sing In")
+            ButtonCTA("Sing In", vm: .init(isLoading: vm.isLoading,
+                                           disable: vm.disable)){
+                vm.singInEvent()
             }
 
             Button {
