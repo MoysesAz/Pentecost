@@ -7,12 +7,15 @@
 
 import Foundation
 import Domain
+import Infra
 
 public struct RegisterUseCase {
     private let repository: AuthRepositoryInterface
+    private let error: RegisterUserErrorsInterface
 
-    public init(repository: AuthRepositoryInterface) {
+    public init(repository: AuthRepositoryInterface = FirebaseAuthRepository(), error: RegisterUserErrorsInterface = FirebaseErrorHandler()) {
         self.repository = repository
+        self.error = error
     }
 
     public func handler(_ input: RegisterUseInput,
@@ -23,9 +26,10 @@ public struct RegisterUseCase {
             case .success(let value):
                 completion(.success(value))
             case .failure(let error):
-                completion(.failure(error))
+                let translateError = self.error.handleError(error)
+                completion(.failure(translateError))
             }
         }
-
     }
 }
+

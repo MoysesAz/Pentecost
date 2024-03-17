@@ -37,13 +37,13 @@ final class SignUpVM: ObservableObject {
             case .success(let result):
                 self.isRegistering.wrappedValue.toggle()
             case .failure(let error):
-                let translateError = error as! RegisterUserErros
+                let translateError = error as! RegisterUserErrors
                 self.handleRegisterUserError(translateError)
             }
         }
     }
 
-    func handleRegisterUserError(_ error: RegisterUserErros) {
+    func handleRegisterUserError(_ error: RegisterUserErrors) {
         switch error {
         case .invalidEmail:
             errorRegister = "Email não esta nos padrões"

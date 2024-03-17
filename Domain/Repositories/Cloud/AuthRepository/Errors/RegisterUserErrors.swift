@@ -1,13 +1,13 @@
 //
 //  RegisterUserErros.swift
-//  Infra
+//  Domain
 //
-//  Created by Moyses Miranda do Vale Azevedo on 23/02/24.
+//  Created by Moyses Miranda do Vale Azevedo on 17/03/24.
 //
 
 import Foundation
 
-public enum RegisterUserErros: Error {
+public enum RegisterUserErrors: Error {
     case invalidEmail
     case emailAlreadyInUse
     case operationNotAllowed

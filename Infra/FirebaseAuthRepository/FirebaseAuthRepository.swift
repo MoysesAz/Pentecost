@@ -17,21 +17,17 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
     public init(_ keychain: Domain.KeychainRepositoryInterface = KeychainRepository()) {
         self.keychain = keychain
     }
-
+    
 
     public func registerUser(email: String,
                            password: String,
                            completion: @escaping (Result<Bool, Error>) -> Void) {
-        
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if error != nil {
-                let translateError = self.registerUserErrors(error: error!)
-                completion(.failure(translateError))
-                return
-            }
 
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completion(.failure(error))
+            }
             completion(.success(true))
-            return
         }
     }
 
@@ -50,7 +46,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
             self.keychain.saveRefreshToken(refreshToken)
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
-            if self.saveUserKeychain(auth) {
+            if self.keychain.saveUserKeychain(auth) {
                 completion(.success(auth))
                 return
             }
@@ -90,7 +86,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
 
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
-            if self.saveUserKeychain(auth) {
+            if self.keychain.saveUserKeychain(auth) {
                 completion(.success(auth))
                 return
             }
@@ -103,7 +99,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
         guard let user = Auth.auth().currentUser else { return nil }
         let auth = AuthEntity(email: user.email!, uuid: user.uid)
 
-        if self.saveUserKeychain(auth) {
+        if self.keychain.saveUserKeychain(auth) {
             return AuthEntity(email: user.email!,
                               uuid: user.uid)
         }
@@ -138,21 +134,6 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
 
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
-        }
-    }
-    
-    private func saveUserKeychain(_ user: AuthEntity) -> Bool {
-        do {
-            let jsonData = try JSONEncoder().encode(user)
-            let jsonString = String(data: jsonData, encoding: .utf8)
-            if jsonString != "" {
-
-                return true
-            }
-            return false
-        } catch {
-            print("Erro ao codificar objeto em JSON: \(error)")
-            return false
         }
     }
 }
