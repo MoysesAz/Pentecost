@@ -26,7 +26,7 @@
 		955A1DBB2B86325400B0B520 /* SignInInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBA2B86325400B0B520 /* SignInInput.swift */; };
 		955A1DBE2B86337E00B0B520 /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DBD2B86337E00B0B520 /* SignInUseCase.swift */; };
 		955A1DC12B86352000B0B520 /* AuthRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DC02B86352000B0B520 /* AuthRepositoryInterface.swift */; };
-		955A1DC42B86382C00B0B520 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DC32B86382C00B0B520 /* AuthRepository.swift */; };
+		955A1DC42B86382C00B0B520 /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DC32B86382C00B0B520 /* FirebaseAuthRepository.swift */; };
 		955A1DC52B863A5000B0B520 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3FAA2B6FFF140015348F /* Infra.framework */; };
 		955A1DC62B863A5000B0B520 /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3FAA2B6FFF140015348F /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		955A1DD22B8665C500B0B520 /* HomePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DD12B8665C500B0B520 /* HomePresentation.swift */; };
@@ -107,7 +107,7 @@
 		95E40E972B883E1600447243 /* LabelButtonSecondy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E40E962B883E1600447243 /* LabelButtonSecondy.swift */; };
 		95F304732B88F1A3006013C0 /* RegisterUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304722B88F1A3006013C0 /* RegisterUserInput.swift */; };
 		95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304742B88F39B006013C0 /* AuthRepositoryErros.swift */; };
-		95F304772B88F4B4006013C0 /* AuthRepository+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304762B88F4B4006013C0 /* AuthRepository+.swift */; };
+		95F304772B88F4B4006013C0 /* FirebaseAuthRepository+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304762B88F4B4006013C0 /* FirebaseAuthRepository+.swift */; };
 		95F3047A2B890E8E006013C0 /* SignInRepositoryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F304792B890E8E006013C0 /* SignInRepositoryErrors.swift */; };
 		95F3047D2B89103C006013C0 /* RegisterUserErros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F3047C2B89103C006013C0 /* RegisterUserErros.swift */; };
 /* End PBXBuildFile section */
@@ -257,7 +257,7 @@
 		955A1DBA2B86325400B0B520 /* SignInInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInput.swift; sourceTree = "<group>"; };
 		955A1DBD2B86337E00B0B520 /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		955A1DC02B86352000B0B520 /* AuthRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryInterface.swift; sourceTree = "<group>"; };
-		955A1DC32B86382C00B0B520 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		955A1DC32B86382C00B0B520 /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
 		955A1DD12B8665C500B0B520 /* HomePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentation.swift; sourceTree = "<group>"; };
 		955BA5D02B9C903700038169 /* UserPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresentation.swift; sourceTree = "<group>"; };
 		955BA5D22B9C904900038169 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 		95E40E962B883E1600447243 /* LabelButtonSecondy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonSecondy.swift; sourceTree = "<group>"; };
 		95F304722B88F1A3006013C0 /* RegisterUserInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserInput.swift; sourceTree = "<group>"; };
 		95F304742B88F39B006013C0 /* AuthRepositoryErros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryErros.swift; sourceTree = "<group>"; };
-		95F304762B88F4B4006013C0 /* AuthRepository+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthRepository+.swift"; sourceTree = "<group>"; };
+		95F304762B88F4B4006013C0 /* FirebaseAuthRepository+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseAuthRepository+.swift"; sourceTree = "<group>"; };
 		95F304792B890E8E006013C0 /* SignInRepositoryErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepositoryErrors.swift; sourceTree = "<group>"; };
 		95F3047C2B89103C006013C0 /* RegisterUserErros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserErros.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -506,14 +506,14 @@
 			path = AuthRepository;
 			sourceTree = "<group>";
 		};
-		955A1DC22B86360300B0B520 /* AuthRepository */ = {
+		955A1DC22B86360300B0B520 /* FirebaseAuthRepository */ = {
 			isa = PBXGroup;
 			children = (
 				95F304782B890E84006013C0 /* Errors */,
-				955A1DC32B86382C00B0B520 /* AuthRepository.swift */,
-				95F304762B88F4B4006013C0 /* AuthRepository+.swift */,
+				955A1DC32B86382C00B0B520 /* FirebaseAuthRepository.swift */,
+				95F304762B88F4B4006013C0 /* FirebaseAuthRepository+.swift */,
 			);
-			path = AuthRepository;
+			path = FirebaseAuthRepository;
 			sourceTree = "<group>";
 		};
 		955A1DCF2B8665B400B0B520 /* SignUp */ = {
@@ -784,7 +784,7 @@
 			children = (
 				955BA61D2B9E266A00038169 /* CoreData */,
 				955BA5F42B9D26B400038169 /* ReadingStatisticsRepository  */,
-				955A1DC22B86360300B0B520 /* AuthRepository */,
+				955A1DC22B86360300B0B520 /* FirebaseAuthRepository */,
 				957F3FB92B6FFF8A0015348F /* KingJames.xml */,
 				957F3FB82B6FFF8A0015348F /* Almeida.xml */,
 				957F3FD42B70095F0015348F /* Bible */,
@@ -1341,11 +1341,11 @@
 				95A1F4092B99398100E4A9F0 /* KingJames.xml in Sources */,
 				95A1F40A2B99398100E4A9F0 /* Almeida.xml in Sources */,
 				95F3047D2B89103C006013C0 /* RegisterUserErros.swift in Sources */,
-				955A1DC42B86382C00B0B520 /* AuthRepository.swift in Sources */,
+				955A1DC42B86382C00B0B520 /* FirebaseAuthRepository.swift in Sources */,
 				955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */,
 				95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */,
 				95F3047A2B890E8E006013C0 /* SignInRepositoryErrors.swift in Sources */,
-				95F304772B88F4B4006013C0 /* AuthRepository+.swift in Sources */,
+				95F304772B88F4B4006013C0 /* FirebaseAuthRepository+.swift in Sources */,
 				955BA60C2B9DFFC600038169 /* ReadingStatisticsRepository.swift in Sources */,
 				957F3FD72B7009780015348F /* XmlGenerator.swift in Sources */,
 			);

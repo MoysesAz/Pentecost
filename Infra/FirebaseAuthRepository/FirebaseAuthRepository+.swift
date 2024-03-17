@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-extension AuthRepository {
+extension FirebaseAuthRepository {
     public func registerUserErrors(error: Error) -> RegisterUserErros {
         if let error = error as NSError? {
             switch AuthErrorCode.Code(rawValue: error.code) {

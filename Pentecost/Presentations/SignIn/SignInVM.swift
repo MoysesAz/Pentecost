@@ -25,7 +25,7 @@ final class SignInVM: ObservableObject {
     private let useCase: SignInUseCase
 
     public init(isLoggin: Bool) {
-        let repository = AuthRepository()
+        let repository = FirebaseAuthRepository()
         useCase = SignInUseCase(repository: repository)
         self.isLoggin = isLoggin
     }

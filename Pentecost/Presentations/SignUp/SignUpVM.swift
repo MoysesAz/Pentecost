@@ -20,7 +20,7 @@ final class SignUpVM: ObservableObject {
     private let useCase: RegisterUseCase
 
     public init(isRegistering: Binding<Bool>) {
-        let repository = AuthRepository()
+        let repository = FirebaseAuthRepository()
         useCase = RegisterUseCase(repository: repository)
         self.isRegistering = isRegistering
     }
