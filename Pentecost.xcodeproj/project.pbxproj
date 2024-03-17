@@ -20,6 +20,8 @@
 		953866AA2BA32177002D22AC /* ApplicationTestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866A92BA32177002D22AC /* ApplicationTestLaunchTests.swift */; };
 		953866B72BA32191002D22AC /* InfraTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B62BA32191002D22AC /* InfraTest.swift */; };
 		953866B92BA32191002D22AC /* InfraTestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */; };
+		953866C12BA73F07002D22AC /* KeychainRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866C02BA73F07002D22AC /* KeychainRepositoryInterface.swift */; };
+		953866C42BA73F6B002D22AC /* KeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866C32BA73F6B002D22AC /* KeychainRepository.swift */; };
 		955A1DA92B8559F400B0B520 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */; };
 		955A1DB22B86222700B0B520 /* SingInPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB12B86222700B0B520 /* SingInPresentation.swift */; };
 		955A1DB42B8624B000B0B520 /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1DB32B8624B000B0B520 /* SignInVM.swift */; };
@@ -251,6 +253,8 @@
 		953866B42BA32191002D22AC /* InfraTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953866B62BA32191002D22AC /* InfraTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTest.swift; sourceTree = "<group>"; };
 		953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTestLaunchTests.swift; sourceTree = "<group>"; };
+		953866C02BA73F07002D22AC /* KeychainRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainRepositoryInterface.swift; sourceTree = "<group>"; };
+		953866C32BA73F6B002D22AC /* KeychainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainRepository.swift; sourceTree = "<group>"; };
 		955A1DA82B8559F400B0B520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955A1DB12B86222700B0B520 /* SingInPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInPresentation.swift; sourceTree = "<group>"; };
 		955A1DB32B8624B000B0B520 /* SignInVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
@@ -480,6 +484,22 @@
 			path = InfraTest;
 			sourceTree = "<group>";
 		};
+		953866BF2BA73EFF002D22AC /* KeychainRepository */ = {
+			isa = PBXGroup;
+			children = (
+				953866C02BA73F07002D22AC /* KeychainRepositoryInterface.swift */,
+			);
+			path = KeychainRepository;
+			sourceTree = "<group>";
+		};
+		953866C22BA73F65002D22AC /* KeychainRepository */ = {
+			isa = PBXGroup;
+			children = (
+				953866C32BA73F6B002D22AC /* KeychainRepository.swift */,
+			);
+			path = KeychainRepository;
+			sourceTree = "<group>";
+		};
 		955A1DB02B86221500B0B520 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +595,7 @@
 		955BA5FE2B9DF61800038169 /* Memory */ = {
 			isa = PBXGroup;
 			children = (
+				953866BF2BA73EFF002D22AC /* KeychainRepository */,
 				955BA6012B9DF76A00038169 /* BibleXML */,
 				955BA5FF2B9DF73E00038169 /* StatisticGoalRepository */,
 			);
@@ -782,6 +803,7 @@
 		957F3FAB2B6FFF140015348F /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				953866C22BA73F65002D22AC /* KeychainRepository */,
 				955BA61D2B9E266A00038169 /* CoreData */,
 				955BA5F42B9D26B400038169 /* ReadingStatisticsRepository  */,
 				955A1DC22B86360300B0B520 /* FirebaseAuthRepository */,
@@ -1306,6 +1328,7 @@
 				957F3FE82B71A4560015348F /* BookXML.swift in Sources */,
 				957F3FCD2B7002920015348F /* BibleXMLRepositoryProtocol.swift in Sources */,
 				957F3FEA2B71A4A30015348F /* ChapterXML.swift in Sources */,
+				953866C12BA73F07002D22AC /* KeychainRepositoryInterface.swift in Sources */,
 				957F400D2B7257710015348F /* VerseXML.swift in Sources */,
 				957F3FC42B70018B0015348F /* Chapter.swift in Sources */,
 				957F3FE62B71A44A0015348F /* BibleXML.swift in Sources */,
@@ -1344,6 +1367,7 @@
 				955A1DC42B86382C00B0B520 /* FirebaseAuthRepository.swift in Sources */,
 				955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */,
 				95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */,
+				953866C42BA73F6B002D22AC /* KeychainRepository.swift in Sources */,
 				95F3047A2B890E8E006013C0 /* SignInRepositoryErrors.swift in Sources */,
 				95F304772B88F4B4006013C0 /* FirebaseAuthRepository+.swift in Sources */,
 				955BA60C2B9DFFC600038169 /* ReadingStatisticsRepository.swift in Sources */,

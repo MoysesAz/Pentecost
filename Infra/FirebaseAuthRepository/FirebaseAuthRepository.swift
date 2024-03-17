@@ -151,7 +151,6 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
             print("Erro ao codificar objeto em JSON: \(error)")
             return false
         }
-
     }
 
     private func saveAuthToken(_ token: String) {
@@ -166,6 +165,3 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
         keychain.clear()
     }
 }
-
-
-
