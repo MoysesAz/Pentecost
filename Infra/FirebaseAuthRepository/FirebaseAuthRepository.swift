@@ -11,30 +11,28 @@ import FirebaseAuth
 import FirebaseAuthCombineSwift
 import KeychainSwift
 
-final public class AuthRepository: AuthRepositoryInterface {
-    private let share: Auth = Auth.auth()
-    private let keychain: KeychainSwift = KeychainSwift()
+final public class FirebaseAuthRepository: AuthRepositoryInterface {
+    private let keychain: KeychainRepositoryInterface
 
-    required public init() {}
+    public init(_ keychain: Domain.KeychainRepositoryInterface = KeychainRepository()) {
+        self.keychain = keychain
+    }
+    
 
     public func registerUser(email: String,
                            password: String,
                            completion: @escaping (Result<Bool, Error>) -> Void) {
-        
-        share.createUser(withEmail: email, password: password) { result, error in
-            if error != nil {
-                let translateError = self.registerUserErrors(error: error!)
-                completion(.failure(translateError))
-                return
-            }
 
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completion(.failure(error))
+            }
             completion(.success(true))
-            return
         }
     }
 
     public func signIn(_ token: String, completion: @escaping (Result<Domain.AuthEntity, Error>) -> Void) {
-        share.signIn(withCustomToken: token) { result, error in
+        Auth.auth().signIn(withCustomToken: token) { result, error in
             if error != nil {
                 let translateError = self.signInErrors(error: error!)
                 completion(.failure(translateError))
@@ -45,10 +43,10 @@ final public class AuthRepository: AuthRepositoryInterface {
                 completion(.failure(SignInRepositoryErrors.anyExpected))
                 return
             }
-            self.saveRefreshToken(refreshToken)
+            self.keychain.saveRefreshToken(refreshToken)
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
-            if self.saveUserKeychain(auth) {
+            if self.keychain.saveUserKeychain(auth) {
                 completion(.success(auth))
                 return
             }
@@ -61,7 +59,7 @@ final public class AuthRepository: AuthRepositoryInterface {
                       password: String,
                       completion: @escaping (Result<AuthEntity, Error>) -> Void) {
 
-        share.signIn(withEmail: email, password: password) { result, error in
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if error != nil {
                 let translateError = self.signInErrors(error: error!)
                 completion(.failure(translateError))
@@ -75,7 +73,7 @@ final public class AuthRepository: AuthRepositoryInterface {
                 }
                 
                 if token != nil {
-                    self.saveAuthToken(token!)
+                    self.keychain.saveAuthToken(token!)
                 }
 
                 completion(.failure(SignInRepositoryErrors.tokenDisabled))
@@ -84,11 +82,11 @@ final public class AuthRepository: AuthRepositoryInterface {
 
             guard let refreshToken = result?.user.refreshToken else {return }
 
-            self.saveRefreshToken(refreshToken)
+            self.keychain.saveRefreshToken(refreshToken)
 
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
-            if self.saveUserKeychain(auth) {
+            if self.keychain.saveUserKeychain(auth) {
                 completion(.success(auth))
                 return
             }
@@ -98,10 +96,10 @@ final public class AuthRepository: AuthRepositoryInterface {
     }
 
     public func getAuthenticatedUser() -> Domain.AuthEntity? {
-        guard let user = share.currentUser else { return nil }
+        guard let user = Auth.auth().currentUser else { return nil }
         let auth = AuthEntity(email: user.email!, uuid: user.uid)
 
-        if self.saveUserKeychain(auth) {
+        if self.keychain.saveUserKeychain(auth) {
             return AuthEntity(email: user.email!,
                               uuid: user.uid)
         }
@@ -110,7 +108,7 @@ final public class AuthRepository: AuthRepositoryInterface {
     }
 
     public func getAuthenticatedUserObserver(completion: @escaping (Result<Domain.AuthEntity, Error>) -> Void) {
-        share.addStateDidChangeListener { auth, user in
+        Auth.auth().addStateDidChangeListener { auth, user in
             guard auth != nil else {
                 completion(.failure(AuthRepositoryError.userNotFound))
                 return
@@ -131,42 +129,11 @@ final public class AuthRepository: AuthRepositoryInterface {
 
     public func logout() {
         do {
-            try share.signOut()
-            clearKeychain()
+            try Auth.auth().signOut()
+            keychain.clearKeychain()
 
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
     }
-    
-    private func saveUserKeychain(_ user: AuthEntity) -> Bool {
-        do {
-            let jsonData = try JSONEncoder().encode(user)
-            let jsonString = String(data: jsonData, encoding: .utf8)
-            if jsonString != "" {
-                keychain.set(jsonData, forKey: "user")
-                return true
-            }
-            return false
-        } catch {
-            print("Erro ao codificar objeto em JSON: \(error)")
-            return false
-        }
-
-    }
-
-    private func saveAuthToken(_ token: String) {
-        self.keychain.set(token, forKey: "authToken")
-    }
-
-    private func saveRefreshToken(_ token: String) {
-        self.keychain.set(token, forKey: "refreshToken")
-    }
-
-    private func clearKeychain() {
-        keychain.clear()
-    }
 }
-
-
-

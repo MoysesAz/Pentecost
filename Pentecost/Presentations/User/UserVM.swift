@@ -6,7 +6,7 @@ final class UserVM: ObservableObject {
     private let useCase: LogoutUseCase
 
     public init() {
-        let repository = AuthRepository()
+        let repository = FirebaseAuthRepository()
         useCase = LogoutUseCase(repository: repository)
     }
 

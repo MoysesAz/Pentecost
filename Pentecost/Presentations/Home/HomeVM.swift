@@ -20,7 +20,7 @@ final class HomeVM: ObservableObject {
     private let useCase: GetAuthenticatedUserObserverUseCase
 
     public init() {
-        let repository = AuthRepository()
+        let repository = FirebaseAuthRepository()
         useCase = .init(repository: repository)
         auth = authenticatedUser()
     }
