@@ -3,10 +3,12 @@ import Domain
 import KeychainSwift
 
 
-final class KeychainRepository: KeychainRepositoryInterface  {
+public final class KeychainRepository: KeychainRepositoryInterface  {
     private let keychain: KeychainSwift = KeychainSwift()
 
-    func saveUserKeychain(_ user: Domain.AuthEntity) -> Bool {
+    public init() {}
+
+    public func saveUserKeychain(_ user: Domain.AuthEntity) -> Bool {
         do {
             let jsonData = try JSONEncoder().encode(user)
             let jsonString = String(data: jsonData, encoding: .utf8)
@@ -21,15 +23,15 @@ final class KeychainRepository: KeychainRepositoryInterface  {
         }
     }
 
-    func saveAuthToken(_ token: String) {
+    public func saveAuthToken(_ token: String) {
         self.keychain.set(token, forKey: "authToken")
     }
 
-    func saveRefreshToken(_ refreshToken: String) {
+    public func saveRefreshToken(_ refreshToken: String) {
         self.keychain.set(refreshToken, forKey: "refreshToken")
     }
 
-    func clearKeychain() {
+    public func clearKeychain() {
         keychain.clear()
     }
 }

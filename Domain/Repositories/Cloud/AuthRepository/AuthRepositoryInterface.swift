@@ -1,7 +1,8 @@
 import Foundation
+import Domain
 
 public protocol AuthRepositoryInterface {
-    init()
+    init(_ keychain: KeychainRepositoryInterface)
 
     func registerUser(email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void)
 

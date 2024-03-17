@@ -12,9 +12,12 @@ import FirebaseAuthCombineSwift
 import KeychainSwift
 
 final public class FirebaseAuthRepository: AuthRepositoryInterface {
-    private let keychain: KeychainSwift = KeychainSwift()
+    private let keychain: KeychainRepositoryInterface
 
-    required public init() {}
+    public init(_ keychain: Domain.KeychainRepositoryInterface = KeychainRepository()) {
+        self.keychain = keychain
+    }
+
 
     public func registerUser(email: String,
                            password: String,
@@ -44,7 +47,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
                 completion(.failure(SignInRepositoryErrors.anyExpected))
                 return
             }
-            self.saveRefreshToken(refreshToken)
+            self.keychain.saveRefreshToken(refreshToken)
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
             if self.saveUserKeychain(auth) {
@@ -74,7 +77,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
                 }
                 
                 if token != nil {
-                    self.saveAuthToken(token!)
+                    self.keychain.saveAuthToken(token!)
                 }
 
                 completion(.failure(SignInRepositoryErrors.tokenDisabled))
@@ -83,7 +86,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
 
             guard let refreshToken = result?.user.refreshToken else {return }
 
-            self.saveRefreshToken(refreshToken)
+            self.keychain.saveRefreshToken(refreshToken)
 
             let auth = AuthEntity(email: result!.user.email!, uuid: result!.user.uid)
 
@@ -131,7 +134,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
     public func logout() {
         do {
             try Auth.auth().signOut()
-            clearKeychain()
+            keychain.clearKeychain()
 
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
@@ -143,7 +146,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
             let jsonData = try JSONEncoder().encode(user)
             let jsonString = String(data: jsonData, encoding: .utf8)
             if jsonString != "" {
-                keychain.set(jsonData, forKey: "user")
+
                 return true
             }
             return false
@@ -151,17 +154,5 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
             print("Erro ao codificar objeto em JSON: \(error)")
             return false
         }
-    }
-
-    private func saveAuthToken(_ token: String) {
-        self.keychain.set(token, forKey: "authToken")
-    }
-
-    private func saveRefreshToken(_ token: String) {
-        self.keychain.set(token, forKey: "refreshToken")
-    }
-
-    private func clearKeychain() {
-        keychain.clear()
     }
 }
