@@ -17,3 +17,8 @@ public protocol AuthRepositoryInterface {
     func logout()
 }
 
+public protocol RegisterUserAuthRepositoryInterface {
+    init() 
+    func registerUser(email: String, password: String, completion: @escaping (Result<Bool, Error>) -> Void)
+}
+

@@ -11,13 +11,17 @@
 		9503D4C72B8A3580005767AF /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C62B8A3580005767AF /* HomeVM.swift */; };
 		9503D4CA2B8A5671005767AF /* CheckUserSessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */; };
 		9516DE8E2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9516DE8D2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift */; };
+		9534665D2BA8710700256C4E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; };
+		9534665E2BA8710700256C4E /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3F802B6FFD1E0015348F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		953466612BA8710700256C4E /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3FAA2B6FFF140015348F /* Infra.framework */; };
+		953466622BA8710700256C4E /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 957F3FAA2B6FFF140015348F /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		953466672BA871A900256C4E /* FirebaseRegisterUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953466662BA871A900256C4E /* FirebaseRegisterUserRepository.swift */; };
 		9538668F2BA31C83002D22AC /* ReadingStatistics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538668B2BA31C5F002D22AC /* ReadingStatistics+CoreDataClass.swift */; };
 		953866902BA31C83002D22AC /* ReadingStatistics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538668C2BA31C5F002D22AC /* ReadingStatistics+CoreDataProperties.swift */; };
 		953866912BA31D15002D22AC /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
 		953866992BA3202A002D22AC /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866982BA3202A002D22AC /* DomainTests.swift */; };
 		9538669B2BA3202A002D22AC /* DomainTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538669A2BA3202A002D22AC /* DomainTestsLaunchTests.swift */; };
 		953866A82BA32177002D22AC /* ApplicationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866A72BA32177002D22AC /* ApplicationTest.swift */; };
-		953866AA2BA32177002D22AC /* ApplicationTestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866A92BA32177002D22AC /* ApplicationTestLaunchTests.swift */; };
 		953866B72BA32191002D22AC /* InfraTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B62BA32191002D22AC /* InfraTest.swift */; };
 		953866B92BA32191002D22AC /* InfraTestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */; };
 		953866C12BA73F07002D22AC /* KeychainRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866C02BA73F07002D22AC /* KeychainRepositoryInterface.swift */; };
@@ -95,7 +99,7 @@
 		957F400F2B7258060015348F /* ChapterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F400E2B7258060015348F /* ChapterVM.swift */; };
 		957F40112B7258180015348F /* ChapterPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F40102B7258180015348F /* ChapterPresentation.swift */; };
 		957F40132B72588F0015348F /* GetChapterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F40122B72588E0015348F /* GetChapterUseCase.swift */; };
-		9591EFE52B881EE9002ACF64 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */; };
+		9591EFE52B881EE9002ACF64 /* RegisterUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE42B881EE9002ACF64 /* RegisterUserUseCase.swift */; };
 		9591EFE72B881F90002ACF64 /* SignUpPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */; };
 		9591EFE92B881FAF002ACF64 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFE82B881FAF002ACF64 /* SignUpVM.swift */; };
 		9591EFEC2B882ABE002ACF64 /* ButtonCTA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591EFEB2B882ABE002ACF64 /* ButtonCTA.swift */; };
@@ -117,6 +121,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9534665F2BA8710700256C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957F3F622B6FFCD00015348F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 957F3F7F2B6FFD1E0015348F;
+			remoteInfo = Domain;
+		};
+		953466632BA8710700256C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 957F3F622B6FFCD00015348F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 957F3FA92B6FFF140015348F;
+			remoteInfo = Infra;
+		};
 		9538669C2BA3202A002D22AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 957F3F622B6FFCD00015348F /* Project object */;
@@ -190,6 +208,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		953466652BA8710700256C4E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9534665E2BA8710700256C4E /* Domain.framework in Embed Frameworks */,
+				953466622BA8710700256C4E /* Infra.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		955BA5F32B9CAEF500038169 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +274,7 @@
 		9503D4C62B8A3580005767AF /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		9503D4C92B8A5671005767AF /* CheckUserSessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUserSessionUseCase.swift; sourceTree = "<group>"; };
 		9516DE8D2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAuthenticatedUserObserverUseCase.swift; sourceTree = "<group>"; };
+		953466662BA871A900256C4E /* FirebaseRegisterUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRegisterUserRepository.swift; sourceTree = "<group>"; };
 		9538668B2BA31C5F002D22AC /* ReadingStatistics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingStatistics+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9538668C2BA31C5F002D22AC /* ReadingStatistics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReadingStatistics+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		953866962BA3202A002D22AC /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,7 +282,6 @@
 		9538669A2BA3202A002D22AC /* DomainTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTestsLaunchTests.swift; sourceTree = "<group>"; };
 		953866A52BA32177002D22AC /* ApplicationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953866A72BA32177002D22AC /* ApplicationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTest.swift; sourceTree = "<group>"; };
-		953866A92BA32177002D22AC /* ApplicationTestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTestLaunchTests.swift; sourceTree = "<group>"; };
 		953866B42BA32191002D22AC /* InfraTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953866B62BA32191002D22AC /* InfraTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTest.swift; sourceTree = "<group>"; };
 		953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTestLaunchTests.swift; sourceTree = "<group>"; };
@@ -319,7 +349,7 @@
 		957F400E2B7258060015348F /* ChapterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterVM.swift; sourceTree = "<group>"; };
 		957F40102B7258180015348F /* ChapterPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPresentation.swift; sourceTree = "<group>"; };
 		957F40122B72588E0015348F /* GetChapterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChapterUseCase.swift; sourceTree = "<group>"; };
-		9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		9591EFE42B881EE9002ACF64 /* RegisterUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserUseCase.swift; sourceTree = "<group>"; };
 		9591EFE62B881F90002ACF64 /* SignUpPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentation.swift; sourceTree = "<group>"; };
 		9591EFE82B881FAF002ACF64 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		9591EFEB2B882ABE002ACF64 /* ButtonCTA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCTA.swift; sourceTree = "<group>"; };
@@ -344,6 +374,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9534665D2BA8710700256C4E /* Domain.framework in Frameworks */,
+				953466612BA8710700256C4E /* Infra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,8 +505,7 @@
 		953866A62BA32177002D22AC /* ApplicationTest */ = {
 			isa = PBXGroup;
 			children = (
-				953866A72BA32177002D22AC /* ApplicationTest.swift */,
-				953866A92BA32177002D22AC /* ApplicationTestLaunchTests.swift */,
+				953866D22BA77A86002D22AC /* Auth */,
 			);
 			path = ApplicationTest;
 			sourceTree = "<group>";
@@ -513,6 +544,22 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		953866D22BA77A86002D22AC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				953866D32BA77A8E002D22AC /* RegisterUserUseCase */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		953866D32BA77A8E002D22AC /* RegisterUserUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				953866A72BA32177002D22AC /* ApplicationTest.swift */,
+			);
+			path = RegisterUserUseCase;
+			sourceTree = "<group>";
+		};
 		955A1DB02B86221500B0B520 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +593,7 @@
 				95F304782B890E84006013C0 /* Errors */,
 				955A1DC32B86382C00B0B520 /* FirebaseAuthRepository.swift */,
 				95F304762B88F4B4006013C0 /* FirebaseAuthRepository+.swift */,
+				953466662BA871A900256C4E /* FirebaseRegisterUserRepository.swift */,
 			);
 			path = FirebaseAuthRepository;
 			sourceTree = "<group>";
@@ -924,7 +972,7 @@
 		9591EFE32B881EC2002ACF64 /* RegisterUser */ = {
 			isa = PBXGroup;
 			children = (
-				9591EFE42B881EE9002ACF64 /* RegisterUseCase.swift */,
+				9591EFE42B881EE9002ACF64 /* RegisterUserUseCase.swift */,
 				95F304722B88F1A3006013C0 /* RegisterUserInput.swift */,
 			);
 			path = RegisterUser;
@@ -1010,11 +1058,14 @@
 				953866A12BA32177002D22AC /* Sources */,
 				953866A22BA32177002D22AC /* Frameworks */,
 				953866A32BA32177002D22AC /* Resources */,
+				953466652BA8710700256C4E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				953866AC2BA32177002D22AC /* PBXTargetDependency */,
+				953466602BA8710700256C4E /* PBXTargetDependency */,
+				953466642BA8710700256C4E /* PBXTargetDependency */,
 			);
 			name = ApplicationTest;
 			productName = ApplicationTest;
@@ -1303,7 +1354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953866AA2BA32177002D22AC /* ApplicationTestLaunchTests.swift in Sources */,
 				953866A82BA32177002D22AC /* ApplicationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1356,7 +1406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9591EFE52B881EE9002ACF64 /* RegisterUseCase.swift in Sources */,
+				9591EFE52B881EE9002ACF64 /* RegisterUserUseCase.swift in Sources */,
 				955BA5D72B9CA02300038169 /* LogoutUseCase.swift in Sources */,
 				9516DE8E2B8E8146004B8D04 /* GetAuthenticatedUserObserverUseCase.swift in Sources */,
 				955A1DBB2B86325400B0B520 /* SignInInput.swift in Sources */,
@@ -1380,6 +1430,7 @@
 				95A1F4092B99398100E4A9F0 /* KingJames.xml in Sources */,
 				95A1F40A2B99398100E4A9F0 /* Almeida.xml in Sources */,
 				955A1DC42B86382C00B0B520 /* FirebaseAuthRepository.swift in Sources */,
+				953466672BA871A900256C4E /* FirebaseRegisterUserRepository.swift in Sources */,
 				955BA6162B9E22EA00038169 /* CoreDataStack.swift in Sources */,
 				95F304752B88F39B006013C0 /* AuthRepositoryErros.swift in Sources */,
 				953866C42BA73F6B002D22AC /* KeychainRepository.swift in Sources */,
@@ -1427,6 +1478,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		953466602BA8710700256C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 957F3F7F2B6FFD1E0015348F /* Domain */;
+			targetProxy = 9534665F2BA8710700256C4E /* PBXContainerItemProxy */;
+		};
+		953466642BA8710700256C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 957F3FA92B6FFF140015348F /* Infra */;
+			targetProxy = 953466632BA8710700256C4E /* PBXContainerItemProxy */;
+		};
 		9538669D2BA3202A002D22AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 957F3F692B6FFCD00015348F /* Pentecost */;
@@ -1529,16 +1590,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Pentecost.ApplicationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Pentecost;
 			};
 			name = Debug;
@@ -1550,16 +1613,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35GM6XG62S;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.Pentecost.ApplicationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Pentecost;
 			};
 			name = Release;

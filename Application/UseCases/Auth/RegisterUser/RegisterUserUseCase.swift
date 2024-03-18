@@ -9,11 +9,11 @@ import Foundation
 import Domain
 import Infra
 
-public struct RegisterUseCase {
-    private let repository: AuthRepositoryInterface
+public struct RegisterUserUseCase {
+    private let repository: RegisterUserAuthRepositoryInterface
     private let error: RegisterUserErrorsInterface
 
-    public init(repository: AuthRepositoryInterface = FirebaseAuthRepository(), error: RegisterUserErrorsInterface = FirebaseErrorHandler()) {
+    public init(repository: RegisterUserAuthRepositoryInterface = FirebaseRegisterUserRepository(), error: RegisterUserErrorsInterface = FirebaseErrorHandler()) {
         self.repository = repository
         self.error = error
     }
