@@ -21,7 +21,7 @@
 		953866912BA31D15002D22AC /* PentecostData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 955BA5FB2B9DF4A800038169 /* PentecostData.xcdatamodeld */; };
 		953866992BA3202A002D22AC /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866982BA3202A002D22AC /* DomainTests.swift */; };
 		9538669B2BA3202A002D22AC /* DomainTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538669A2BA3202A002D22AC /* DomainTestsLaunchTests.swift */; };
-		953866A82BA32177002D22AC /* ApplicationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866A72BA32177002D22AC /* ApplicationTest.swift */; };
+		953866A82BA32177002D22AC /* RegisterUserUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866A72BA32177002D22AC /* RegisterUserUseCaseTest.swift */; };
 		953866B72BA32191002D22AC /* InfraTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B62BA32191002D22AC /* InfraTest.swift */; };
 		953866B92BA32191002D22AC /* InfraTestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */; };
 		953866C12BA73F07002D22AC /* KeychainRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953866C02BA73F07002D22AC /* KeychainRepositoryInterface.swift */; };
@@ -281,7 +281,7 @@
 		953866982BA3202A002D22AC /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		9538669A2BA3202A002D22AC /* DomainTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTestsLaunchTests.swift; sourceTree = "<group>"; };
 		953866A52BA32177002D22AC /* ApplicationTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		953866A72BA32177002D22AC /* ApplicationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTest.swift; sourceTree = "<group>"; };
+		953866A72BA32177002D22AC /* RegisterUserUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserUseCaseTest.swift; sourceTree = "<group>"; };
 		953866B42BA32191002D22AC /* InfraTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		953866B62BA32191002D22AC /* InfraTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTest.swift; sourceTree = "<group>"; };
 		953866B82BA32191002D22AC /* InfraTestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTestLaunchTests.swift; sourceTree = "<group>"; };
@@ -555,7 +555,7 @@
 		953866D32BA77A8E002D22AC /* RegisterUserUseCase */ = {
 			isa = PBXGroup;
 			children = (
-				953866A72BA32177002D22AC /* ApplicationTest.swift */,
+				953866A72BA32177002D22AC /* RegisterUserUseCaseTest.swift */,
 			);
 			path = RegisterUserUseCase;
 			sourceTree = "<group>";
@@ -1354,7 +1354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				953866A82BA32177002D22AC /* ApplicationTest.swift in Sources */,
+				953866A82BA32177002D22AC /* RegisterUserUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

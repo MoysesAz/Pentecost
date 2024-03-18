@@ -18,7 +18,7 @@ public struct RegisterUserUseCase {
         self.error = error
     }
 
-    public func handler(_ input: RegisterUseInput,
+    public func handler(_ input: RegisterUserInput,
                       completion: @escaping (Result<Bool, Error>) -> Void) {
 
         repository.registerUser(email: input.email, password: input.password) { result in
