@@ -26,6 +26,7 @@ final public class FirebaseAuthRepository: AuthRepositoryInterface {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 completion(.failure(error))
+                return
             }
             completion(.success(true))
         }
