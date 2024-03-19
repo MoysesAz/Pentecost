@@ -25,7 +25,8 @@ public class FirebaseErrorHandler: RegisterUserErrorsInterface {
             default:
                 return .anyExpected
             }
+        } else {
+            fatalError("The error must be able to be transformed into a FIRAuthErrorDomain")
         }
-        return .anyExpected
     }
 }
