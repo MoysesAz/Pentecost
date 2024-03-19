@@ -9,13 +9,11 @@ import XCTest
 import Domain
 import Infra
 import FirebaseAuth
-
 @testable import Application
 
 final class RegisterUserUseCaseTest: XCTestCase {
-
-    func test_registerUser_should_complete_with_sucess()  {
-        let (sut, repository, error) = makeSut()
+    func test_registerUser_should_complete_with_true_in_success()  {
+        let (sut, repository, _) = makeSut()
         let exp = expectation(description: "waiting")
         sut.handler(makeRegisterUserInput()) { result in
             switch result {
@@ -28,7 +26,20 @@ final class RegisterUserUseCaseTest: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
-
+    func test_registerUser_should_complete_with_failure_registerUserErrors()  {
+        let (sut, repository, _) = makeSut()
+        let exp = expectation(description: "waiting")
+        sut.handler(makeRegisterUserInput()) { result in
+            switch result {
+            case .success: XCTFail("Expected failure received \(result) instead")
+            case .failure(let failure):
+                XCTAssert(failure is RegisterUserErrors)
+            }
+            exp.fulfill()
+        }
+        repository.completionWithFailure()
+        wait(for: [exp], timeout: 1)
+    }
 }
 
 extension RegisterUserUseCaseTest {
@@ -53,12 +64,10 @@ extension RegisterUserUseCaseTest {
         func completionWithSucess() {
             completion?(.success(true))
         }
-//
-//        func completionWithFailure() {
-//            completion?(.fai(true))
-//        }
 
-
+        func completionWithFailure() {
+            completion?(.failure(Domain.RegisterUserErrors.anyExpected as! Error))
+        }
     }
 
     class CustomError: Domain.RegisterUserErrorsInterface {
